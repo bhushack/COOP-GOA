@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="GoaSocietyRegistration.Organization.admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Organization</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <script src="../Scripts/jquery-3.5.0.min.js"></script> 
+
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <link href="assets/bootstrap.min.css" rel="stylesheet" />
+    <link href="../AssestsLogin/CSS/fontawsome.css" rel="stylesheet" />
+    <link href="assets/font-awesome.css" rel="stylesheet" />
+    <link href="assets/style.css" rel="stylesheet" />
+    <link rel="icon" href="../favicon.ico" type="image/gif" sizes="16x16"/>
+
+
+     <script>
+        $(function () {
+            $("body").on('click keypress', function () {
+                ResetThisSession();
+            });
+        });
+
+        var timeInSecondsAfterSessionOut = 1200; // change this to change session time out (in seconds).
+        var secondTick = 0;
+
+        function ResetThisSession() {
+            secondTick = 0;
+        }
+
+        function StartThisSessionTimer() {
+            secondTick++;
+            var timeLeft = ((timeInSecondsAfterSessionOut - secondTick) / 60).toFixed(0); // in minutes
+        timeLeft = timeInSecondsAfterSessionOut - secondTick; // override, we have 30 secs only 
+            $("#spanTimeLeft").html(timeLeft);
+            if (secondTick > timeInSecondsAfterSessionOut) {
+                clearTimeout(tick);
+                document.getElementById("btnHidden").click();
+                window.location = "../OrganizationLogin.aspx";
+                return;
+            }
+            tick = setTimeout("StartThisSessionTimer()", 1000);
+        }
+        StartThisSessionTimer();
+</script>
+
+      <script>
+        $(window).ready(function () {
+            $('#status').fadeOut();
+            $('#preloader').delay(200).fadeOut('slow');
+        });
+    </script>
+    <style>
+        #preloader {
+            background: #FFF;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 9999;
+        }
+
+        #status,
+        .status-mes {
+              background-image: url(../assets/images/loading.gif);  
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px;
+            left: 50%;
+            margin: -100px 0 0 -100px;
+            position: absolute;
+            top: 50%;
+            width: 200px;
+        }
+
+        .status-mes {
+            background: none;
+            left: 0;
+            margin: 0;
+            text-align: center;
+            top: 65%;
+        }
+        .hidden { display: none; }
+    </style>
+     <script>
+        $(window).ready(function () {
+            $('#status').fadeOut();
+            $('#preloader').delay(200).fadeOut('slow');
+        });
+    </script>
+     <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+         <script type="text/javascript">
+  $(document).ready(function() {
+      window.history.pushState(null, "", window.location.href);        
+      window.onpopstate = function() {
+          window.history.pushState(null, "", window.location.href);
+      };
+  });
+</script>
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:#f9f5f5c9" onload="noBack();">
+    <form id="form1" runat="server">
+        <div class="container-fluid" id="wrapper">
+            <div class="row">
+                <nav class="sidebar col-xs-12 col-sm-4 col-lg-3 col-xl-2">                    
+                    <img src="assets/images/iconic_logo_v1.png" width="100%" style="margin-top:3%;padding:5px;" />
+                   <%-- <h1 class="site-title"><a href="Dashboard.aspx"><em class="fa fa-rocket"></em>NATIONAL INFORMATICS CENTRE</a></h1>--%>
+
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><em class="fa fa-bars"></em></a>
+                    <asp:Menu ID="Menu1" CssClass="nav nav-pills flex-column sidebar-nav" runat="server" Orientation="Vertical">
+                        <LevelMenuItemStyles>
+                            <asp:MenuItemStyle CssClass="main_menu" />
+                            <asp:MenuItemStyle CssClass="level_menu" />
+                        </LevelMenuItemStyles>
+                        <StaticSelectedStyle CssClass="selected" />
+                    </asp:Menu>
+               <%--     <asp:LinkButton ID="LinkButton2" OnClick="LinkButton2_Click" CssClass="logout-button" runat="server"><em class="fa fa-power-off"></em>Signout</asp:LinkButton>--%>
+                </nav>
+                <main class="col-xs-12 col-sm-8 col-lg-9 col-xl-10  ml-auto">
+                    <header class="page-header row justify-center">
+                        <div class="col-md-6 col-lg-8">
+                            <%--<h1 class="float-left text-center text-md-left">Cards</h1>--%>
+                            <h4 style="align-content:center; color:white">SOCIETY REGISTRATION (Department of Registration, Goa)</h4>
+                        </div>
+                        <div class="dropdown user-dropdown col-md-6 col-lg-4 text-center text-md-right">
+                            <a class="btn btn-stripped dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+                                <div class="username mt-1" style="text-transform:none!important;text-align:center">
+                                    <%--<i class="fa fa-user fa-2x" aria-hidden="true"></i>--%>
+                                    <asp:Label ID="lbusername" Font-Bold="true" runat="server" Text=""></asp:Label><br /><asp:Label ID="userdesignation" CssClass="form-group" runat="server" Text=""></asp:Label>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" style="margin-right: 1.5rem;" aria-labelledby="dropdownMenuLink"> 
+                                <a class="dropdown-item" href="ViewProfile.aspx"><em class="fa fa-user-circle mr-1"></em>View Profile</a>
+                                <%--<a class="dropdown-item" href="../Download/DSCSign.zip"><em class="fa fa-download mr-1"></em>Download DSC</a>
+                                <a class="dropdown-item" href="Digital/DSCRegister.aspx"><em class="fa fa-registered mr-1"></em>Register DSC</a>--%>
+                                <asp:LinkButton ID="LinkButton1" CausesValidation="false" CssClass="dropdown-item" OnClick="lkbtnLogout_Click" runat="server"><em class="fa fa-power-off mr-1"></em>Logout</asp:LinkButton>
+                            </div>
+                        </div>
+                    
+                        <asp:Button ID="btnHidden" runat="server" CssClass="hidden" OnClick="btnHidden_Click" ClientIDMode="Static" />
+                    </header>
+                    
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </main>
+                 <div id="preloader">
+            <div id="status">
+                <div class="status-mes"></div>
+            </div>
+        </div>
+            </div>
+        </div>
+          
+    </form>
+
+    <%--<script src="../Assests/Organization/vendor/jquery/jquery-3.2.1.min.js"></script>--%>
+  
+</body>
+</html>

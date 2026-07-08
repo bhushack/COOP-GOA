@@ -1,0 +1,15 @@
+---------------------------------------------------------------------------------------------------------------------------------
+02-04-2025 10:56:16 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+02-04-2025 10:58:54 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at GoaSocietyRegistration.Organization.GenerateCertificate.genrate() in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\GenerateCertificate.aspx.cs:line 1662genrate() GenerateCertificate from ::1
+---------------------------------------------------------------------------------------------------------------------------------
+02-04-2025 10:58:54 ==> Thread was being aborted.    at GoaSocietyRegistration.Organization.GenerateCertificate.genrate() in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\GenerateCertificate.aspx.cs:line 1666
+   at GoaSocietyRegistration.Organization.GenerateCertificate.LkGenerateCertificate_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\GenerateCertificate.aspx.cs:line 382LkGenerateCertificate_Click GenerateCertificate

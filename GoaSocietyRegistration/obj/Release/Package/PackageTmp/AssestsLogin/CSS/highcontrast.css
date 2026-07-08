@@ -1,0 +1,90 @@
+body {
+  background: #000;
+  color: #fff; }
+
+body a, .footer-bottom-wrapper a, .distictInfo .distictInfoTest, .findServices .findServiveBox, .findServices .findServiveBox .findServiveBoxText, .findServices .findServiveBox .findServiveBoxicon, #galleryTab .resp-tabs-list li, #gallery .galleryThumb span, #videos .galleryThumb span, .main-menu .sub-nav ul li a, h2.resp-accordion, #accessibility ul li select, .list-style-big-icon .villege .list-style-big-iconTest, .list-style-big-icon .mc .list-style-big-iconTest, .list-style-big-icon .ps .list-style-big-iconTest, #accordion .accordianheader h3, #postWidgetsSmall .authorMeta .authorName, .help.is-success, .help.is-danger, #accordion6 .accordianheader, #accordion6 .accordianheader, #accordion6 .accordianheader h3 {
+  color: #ffff00 !important; }
+
+.distictInfo .villege .distictInfoIcon, .distictInfo .mc .distictInfoIcon, .distictInfo .ps .distictInfoIcon, .aboutSection .row, .aboutDictict, .informationalTab, #infotab .resp-tabs-container, #infotab .resp-tabs-list li, .khowMinisterBox, .khowMinisterBox:last-child, .findServices .findServiveBox, .publicUtilities a.color1 .publicUtilitiesCount, .publicUtilities a.color2 .publicUtilitiesCount, .publicUtilities a.color3 .publicUtilitiesCount, .publicUtilities a.color4 .publicUtilitiesCount, .publicUtilities a.color5 .publicUtilitiesCount, .publicUtilities a.color6 .publicUtilitiesCount, .publicUtilities a.color7 .publicUtilitiesCount, .publicUtilities a.color8 .publicUtilitiesCount, #importantLinks .list-style.colmn2, #galleryTab .resp-tabs-container, #galleryTab .resp-tabs-list li, .distictbgbox, #overflowMenu, .main-menu .sub-nav, .distictbgbox ul li a span, h2.resp-accordion, #accessibility ul li select, #postWidgetsSmall .authorMeta .authorThumb, #accordion7 {
+  background-color: #000 !important;
+  border: 1px solid #3b3b3b; }
+
+.aboutDictict, .khowMinisterBox .MinisterProfile .Pname, .khowMinisterBox .MinisterProfile .Pdesg, .copyRightsText, .distictbgbox, #accordion .accordianheader.ui-accordion-header-active, #accordion .accordianbody {
+  color: #fff; }
+
+.publicUtilities a .publicUtilitiesName, .list-style-statistics li .list-style-statisticsName, .list-style-big-icon .list-style-big-iconIcon, .list-style-big-icon .mc .list-style-big-iconIcon, .list-style-big-icon .ps .list-style-big-iconIcon, #table2 thead th {
+  background-color: #000 !important; }
+
+.publicUtilities a.color1:before, .publicUtilities a.color2:before, .publicUtilities a.color3:before, .publicUtilities a.color4:before, .publicUtilities a.color5:before, .publicUtilities a.color6:before, .publicUtilities a.color7:before, .publicUtilities a.color8:before {
+  background-color: #ffff00 !important; }
+
+.gallerySection, #footerScrollbarWrapper, #footer, .list-group-item, #overflowMenu .ofMenu ul li a, #accordion4 .accordianbody, #accordion7 .accordianbody {
+  background: #000 !important;
+  border-top: 1px solid #3b3b3b;
+  border-bottom: 1px solid #3b3b3b; }
+
+.list-style-statistics li.color1 .list-style-statisticsCount, .list-style-statistics li.color3 .list-style-statisticsCount, .list-style-statistics li.color5 .list-style-statisticsCount, .list-style-statistics li.color7 .list-style-statisticsCount, .list-style-statistics li.color2 .list-style-statisticsCount, .list-style-statistics li.color4 .list-style-statisticsCount, .list-style-statistics li.color8 .list-style-statisticsCount, .list-style-statistics li.color6 .list-style-statisticsCount, .btn-default, .btn-primary, .btn-danger, .btn-gov, .btn-link, .btn-warning, .btn-gov-border, .btn-gov-border-white, .btn-gov, .btn-primary, .btn-gov, .btn-block, .btn-success, #accordion2 .accordianheader.ui-accordion-header-active, #accordion2 .accordianheader, #accordion3, #accordion3 .accordianheader.ui-accordion-header-active, #accordion4 .accordianheader, #accordion5 .accordianheader.ui-accordion-header-active, #accordion6, #table2 thead th, #table2 tbody tr td:nth-child(even), #table3 thead th:nth-child(1), #table3 tfoot td:nth-child(1), #table3 thead th:nth-child(2), #table3 tfoot td:nth-child(2), #table3 thead th:nth-child(3), #table3 tfoot td:nth-child(3), #table3, .table4Wrapper, #table4 tbody tr td:first-child, .list-style-small-icon li a span, #organisation-chart .parent-element .parent-List, #organisation-chart .child-element .child-block .child-level-one, #tab8 .resp-tabs-list .resp-tab-item.resp-tab-active, #photoGallery5 .photoGallery4Inner .photoGallery4Items .photoGallery4ItemsCaption {
+  background: #000 !important;
+  color: #ffff00 !important;
+  border: 1px solid #ffff00; }
+
+#table3 tbody tr td:first-child, #table3 tbody tr td, #table3 tbody tr td:last-child, #table3 tbody tr:nth-child(even) td, #table4 thead tr td, #table4 tbody tr td:nth-child(2), #table4 tbody tr td:nth-child(3), #table4 tbody tr td:nth-child(4), #table4 thead tr th:nth-child(2), #table4 thead tr th:nth-child(3), #table4 thead tr th:last-child, .table5 thead th, .table5 tbody td, .table5 tbody tr:nth-child(even) td, .table6 thead th, .table6 tbody td, .table6 tbody tr:nth-child(even) td, #photoGallery1, .bg-grey, #photoGallery3, #tab5 .resp-tabs-list .resp-tab-item, #photoGallery6 .photoGallery6Item .photoGallery6ItemCaption .photoGallery6ItemCaptionContent .socialBox {
+  background: #000;
+  color: #fff; }
+
+#photoGallery6 .photoGallery6Item .photoGallery6ItemCaption {
+  background: rgba(0, 0, 0, 0.7); }
+
+.list-style-statistics li.color1:before, .list-style-statistics li.color3:before, .list-style-statistics li.color5:before, .list-style-statistics li.color7:before, .list-style-statistics li.color2:before, .list-style-statistics li.color4:before, .list-style-statistics li.color6:before, .list-style-statistics li.color8:before, #tab8 .resp-tabs-list .resp-tab-item {
+  background: #ffff00 !important; }
+
+.main-menu .nav-item > a.open, #footerScrollbarWrapper2 .flex-direction-nav a:before, #accordion1 .accordianheader.ui-accordion-header-active, #accordion1 .accordianheader, #accordion3 .accordianheader, #accordion4 .accordianheader.ui-accordion-header-active, #accordion5 .accordianheader {
+  background: #ffff00 !important;
+  color: #000 !important; }
+
+.fixedHeader, .bgWrapper, .bg-white, #photoGallery1 .photoGalleryWrapper .photos .phptpItem .thumbCaption > a, .table1 thead, .table1 tbody td, .table1 tbody tr:nth-child(even) td, #accordion .accordianheader h3, #accordion .accordianheader.ui-accordion-header-active, #accordion .accordianbody, .bg-blue, .bg-grey-light, #photoGallery6, #accordion1 .accordianbody, #accordion2 .accordianbody, #accordion3 .accordianbody, #accordion5 .accordianbody {
+  background: #000; }
+
+#accordion1 .accordianbody, #accordion2 .accordianbody, #accordion2 i, #accordion3 .accordianbody, #accordion4 .accordianbody, #tab5 .resp-tabs-list .resp-tab-item.resp-tab-active {
+  color: #fff; }
+
+.list-style-big-icon .list-style-big-iconIcon, .list-style-big-icon .mc .list-style-big-iconIcon, .list-style-big-icon .ps .list-style-big-iconIcon, .list-style-big-icon .villege .list-style-big-iconIcon, .bg-white, #photoGallery1 .photoGalleryWrapper .photos .phptpItem .thumbCaption > a, .table1, #newsletter, .box {
+  border: 1px solid #3b3b3b; }
+
+.list_icon_boxBox.color1,
+.list_icon_boxBox.color2,
+.list_icon_boxBox.color3,
+.list_icon_boxBox.color4,
+.list_icon_boxBox.color5,
+.list_icon_boxBox.color6,
+.list_icon_boxBox.color7,
+.list_icon_boxBox.color8,
+.list_icon_boxBox.color9,
+.list_icon_boxBox.color10 {
+  background: #000 !important;
+  color: #ffff00 !important;
+  border: 1px solid #ffff00; }
+  .list_icon_boxBox.color1 .list_icon_boxBoxicon, .list_icon_boxBox.color1 .list_icon_boxBoxText,
+  .list_icon_boxBox.color2 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color2 .list_icon_boxBoxText,
+  .list_icon_boxBox.color3 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color3 .list_icon_boxBoxText,
+  .list_icon_boxBox.color4 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color4 .list_icon_boxBoxText,
+  .list_icon_boxBox.color5 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color5 .list_icon_boxBoxText,
+  .list_icon_boxBox.color6 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color6 .list_icon_boxBoxText,
+  .list_icon_boxBox.color7 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color7 .list_icon_boxBoxText,
+  .list_icon_boxBox.color8 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color8 .list_icon_boxBoxText,
+  .list_icon_boxBox.color9 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color9 .list_icon_boxBoxText,
+  .list_icon_boxBox.color10 .list_icon_boxBoxicon,
+  .list_icon_boxBox.color10 .list_icon_boxBoxText {
+    color: #ffff00 !important; }
+	
+	.produce-list-cntr .tourmainContent.tourist-ctnt-one.produce-fxdtype .produce-type, .produce-type-single{ background-color:transparent; border:1px solid #ffffff;}
+
+/*# sourceMappingURL=high-contrast.css.map */

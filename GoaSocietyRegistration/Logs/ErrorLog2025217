@@ -1,0 +1,116 @@
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 15:14:54 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 15:41:03 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 16:00:38 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 16:26:51 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 16:27:42 ==> 23505: duplicate key value violates unique constraint "digital_sign_officer_verify_pkey"    at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteDbDataReader>d__100.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__92.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at GoaSocietyRegistration.Utility.save_card_data(CardData card, Int32 districtid) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Development\Utility.cs:line 1412save_card_data()----Utility.cs
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 16:27:42 ==> save card:-1Page_Load VerifyRegister from ::1
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:15:07 ==> Object reference not set to an instance of an object.    at GoaSocietyRegistration.Organization.Digital.DSCRegister.Page_Load(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Organization\Digital\DSCRegister.aspx.cs:line 21Page_Load DSCRegister from ::1
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:15:22 ==> Object reference not set to an instance of an object.    at GoaSocietyRegistration.Organization.Digital.DSCRegister.Page_Load(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Organization\Digital\DSCRegister.aspx.cs:line 21Page_Load DSCRegister from ::1
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:15:22 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.Organization.Digital.DSCRegister.LinkButton1_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Organization\Digital\DSCRegister.aspx.cs:line 65
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:15:42 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:32:48 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:53:17 ==> Object reference not set to an instance of an object.    at GoaSocietyRegistration.Organization.Digital.CreatePDF.createpdf() in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Organization\Digital\CreatePDF.aspx.cs:line 25
+   at GoaSocietyRegistration.Organization.Digital.Public.Page_Load(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Organization\Digital\Public.aspx.cs:line 47Page_Load--CreatePayloadRegister Public from ::1
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:53:54 ==> Object reference not set to an instance of an object.    at GoaSocietyRegistration.Organization.Digital.DSCRegister.Page_Load(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Organization\Digital\DSCRegister.aspx.cs:line 21Page_Load DSCRegister from ::1
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:53:59 ==> Object reference not set to an instance of an object.    at GoaSocietyRegistration.Organization.Digital.DSCRegister.Page_Load(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Organization\Digital\DSCRegister.aspx.cs:line 21Page_Load DSCRegister from ::1
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:53:59 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.Organization.Digital.DSCRegister.LinkButton1_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\Organization\Digital\DSCRegister.aspx.cs:line 65
+---------------------------------------------------------------------------------------------------------------------------------
+17-02-2025 17:54:18 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin

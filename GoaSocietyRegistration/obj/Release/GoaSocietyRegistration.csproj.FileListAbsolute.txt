@@ -1,0 +1,72 @@
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\csc.exe
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\vbc.exe
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\VBCSCompiler.exe
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.dll.config
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.XmlSerializers.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.pdb
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\bin\Microsoft.mshtml.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.pdb
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.XmlSerializers.dll
+C:\Users\nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\csc.exe
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\vbc.exe
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.dll.config
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.XmlSerializers.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.pdb
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\bin\Microsoft.mshtml.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.csproj.AssemblyReference.cache
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\obj\Release\GoaSocie.88BA6AF0.Up2Date
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.dll
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.pdb
+C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.XmlSerializers.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.pdb
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\bin\AntiXssLibrary.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\csc.exe
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\vbc.exe
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\VBCSCompiler.exe
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.dll.config
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.XmlSerializers.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\GoaSocietyRegistration.pdb
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\bin\Microsoft.mshtml.dll
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\obj\Release\GoaSocie.88BA6AF0.Up2Date
+C:\Users\user\source\repos\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.XmlSerializers.dll
+C:\Users\user\source\repos\eSociety\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\eSociety\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\eSociety\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.dll
+C:\Users\user\source\repos\eSociety\eSociety\GoaSocietyRegistration\obj\Release\GoaSocietyRegistration.pdb

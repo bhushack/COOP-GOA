@@ -1,0 +1,1645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3957B1C4-03C1-4F2A-9221-10937A601B40}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoaSocietyRegistration</RootNamespace>
+    <AssemblyName>GoaSocietyRegistration</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXssLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\AntiXssLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ByteEncryption, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Desktop\dll files\ByteEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Crc32C.NET, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crc32C.NET.1.0.5.0\lib\net20\Crc32C.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DigitalEncrypt">
+      <HintPath>..\..\..\..\..\Desktop\DigitalEncrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.3.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.3.1\lib\net471\DnsClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Encryption">
+      <HintPath>..\..\..\..\..\Desktop\Encryption.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.17.0.146, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.17.0\lib\net452\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.17.0.146, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.17.0\lib\net452\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.17.0.146, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.17.0\lib\net452\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.17.0.146, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.17.0\lib\net452\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.17.0.146, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.17.0\lib\net452\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.17.0.146, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.17.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.8\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.9.1\lib\net452\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.9.1\lib\net452\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.9.1\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.0.10.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.10\lib\net451\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.23.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.23.0\lib\net45\SharpCompress.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Snappy.NET, Version=1.1.1.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Snappy.NET.1.1.1.8\lib\net45\Snappy.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=18.1460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.HtmlToPdfConverter.QtWebKit.AspNet.18.1.0.42\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.HtmlConverter.Base, Version=18.1460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.HtmlToPdfConverter.QtWebKit.AspNet.18.1.0.42\lib\net46\Syncfusion.HtmlConverter.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=18.1460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.HtmlToPdfConverter.QtWebKit.AspNet.18.1.0.42\lib\net46\Syncfusion.Pdf.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WS_Encryption, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Desktop\dll files\WS_Encryption.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aboutus.html" />
+    <Content Include="Admin\assets\adminstyle\bootstrap-datepicker.js" />
+    <Content Include="Admin\assets\adminstyle\bootstrap.min.css" />
+    <Content Include="Admin\assets\adminstyle\css\main.css" />
+    <Content Include="Admin\assets\adminstyle\css\util.css" />
+    <Content Include="Admin\assets\adminstyle\font-awesome.css" />
+    <Content Include="Admin\assets\adminstyle\js\main.js" />
+    <Content Include="Admin\assets\adminstyle\style.css" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\js\popper.js" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Admin\assets\css\all.css" />
+    <Content Include="Admin\assets\css\download.png" />
+    <Content Include="Admin\assets\css\font-awesome.min.css" />
+    <Content Include="Admin\assets\css\ionicons.css" />
+    <Content Include="Admin\assets\css\materialdesignicons.min.css" />
+    <Content Include="Admin\assets\css\style.css" />
+    <Content Include="Admin\assets\css\style1.css" />
+    <Content Include="Admin\assets\css\typicons.css" />
+    <Content Include="Admin\assets\css\typicons.svg" />
+    <Content Include="Admin\assets\css\user-512.png" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\assets\js\dashboard.js" />
+    <Content Include="Admin\assets\js\misc.js" />
+    <Content Include="Admin\assets\js\off-canvas.js" />
+    <Content Include="Admin\assets\js\vendor.bundle.addons.js" />
+    <Content Include="Admin\assets\js\vendor.bundle.base.js" />
+    <Content Include="Admin\datepicker\images\ui-icons_444444_256x240.png" />
+    <Content Include="Admin\datepicker\images\ui-icons_555555_256x240.png" />
+    <Content Include="Admin\datepicker\images\ui-icons_777620_256x240.png" />
+    <Content Include="Admin\datepicker\images\ui-icons_777777_256x240.png" />
+    <Content Include="Admin\datepicker\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Admin\datepicker\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Admin\datepicker\jquery-1.10.2.js" />
+    <Content Include="Admin\datepicker\jquery-ui.css" />
+    <Content Include="Admin\datepicker\jquery-ui.js" />
+    <Content Include="AssestsLogin\CSS\1liststyle.min.css" />
+    <Content Include="AssestsLogin\CSS\base.css" />
+    <Content Include="AssestsLogin\CSS\blank.gif" />
+    <Content Include="AssestsLogin\CSS\bootstrap.min.css" />
+    <Content Include="AssestsLogin\CSS\componenthelper.css" />
+    <Content Include="AssestsLogin\CSS\customflexslider.css" />
+    <Content Include="AssestsLogin\CSS\events.css" />
+    <Content Include="AssestsLogin\CSS\extra.css" />
+    <Content Include="AssestsLogin\CSS\extra.features.css" />
+    <Content Include="AssestsLogin\CSS\fancybox_overlay.png" />
+    <Content Include="AssestsLogin\CSS\fancybox_sprite.png" />
+    <Content Include="AssestsLogin\CSS\flexslider.min.css" />
+    <Content Include="AssestsLogin\CSS\fontawesome.min.css" />
+    <Content Include="AssestsLogin\CSS\fontawsome.css" />
+    <Content Include="AssestsLogin\CSS\footerlogocarousel.css" />
+    <Content Include="AssestsLogin\CSS\gallery.css" />
+    <Content Include="AssestsLogin\CSS\highcontrast.css" />
+    <Content Include="AssestsLogin\CSS\js_composer.min.css" />
+    <Content Include="AssestsLogin\CSS\js_composer_tta.min.css" />
+    <Content Include="AssestsLogin\CSS\liststyle.min.css" />
+    <Content Include="AssestsLogin\CSS\photogalleryhome.css" />
+    <Content Include="AssestsLogin\CSS\servicetabs.css" />
+    <Content Include="AssestsLogin\CSS\sliderhelper.css" />
+    <Content Include="AssestsLogin\CSS\style.css" />
+    <Content Include="AssestsLogin\CSS\style.min.css" />
+    <Content Include="AssestsLogin\CSS\style1.css" />
+    <Content Include="AssestsLogin\CSS\styles.css" />
+    <Content Include="AssestsLogin\CSS\thememylogin.css" />
+    <Content Include="AssestsLogin\fonts\flexslider-icon.svg" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont93e3.svg" />
+    <Content Include="AssestsLogin\fonts\icomooncb5a.svg" />
+    <Content Include="AssestsLogin\fonts\LineIcons.svg" />
+    <Content Include="AssestsLogin\img\cm.jpg" />
+    <Content Include="AssestsLogin\img\digital-india.png" />
+    <Content Include="AssestsLogin\img\digitalIndia.png" />
+    <Content Include="AssestsLogin\img\Dr.Pramod Sawant.JPG" />
+    <Content Include="AssestsLogin\img\goa.png" />
+    <Content Include="AssestsLogin\img\goa_map.png" />
+    <Content Include="AssestsLogin\img\images.jpg" />
+    <Content Include="AssestsLogin\img\makeinindia.png" />
+    <Content Include="AssestsLogin\img\minislider\2017053014.png" />
+    <Content Include="AssestsLogin\img\minislider\2017053017.png" />
+    <Content Include="AssestsLogin\img\minislider\2017053039.png" />
+    <Content Include="AssestsLogin\img\minislider\2017053052.png" />
+    <Content Include="AssestsLogin\img\minislider\2017053094.png" />
+    <Content Include="AssestsLogin\img\minislider\2017072418.png" />
+    <Content Include="AssestsLogin\img\minislider\2017110781.png" />
+    <Content Include="AssestsLogin\img\minislider\2019052293.png" />
+    <Content Include="AssestsLogin\img\nicLogo.png" />
+    <Content Include="AssestsLogin\img\nilesh.jpg" />
+    <Content Include="AssestsLogin\img\org.png" />
+    <Content Include="AssestsLogin\img\Register.png" />
+    <Content Include="AssestsLogin\img\sitemap-icon.png" />
+    <Content Include="AssestsLogin\img\User.png" />
+    <Content Include="AssestsLogin\JS\common.js" />
+    <Content Include="AssestsLogin\JS\core.min.js" />
+    <Content Include="AssestsLogin\JS\custom.js" />
+    <Content Include="AssestsLogin\JS\easyResponsiveTabs.js" />
+    <Content Include="AssestsLogin\JS\external.js" />
+    <Content Include="AssestsLogin\JS\extra.js" />
+    <Content Include="AssestsLogin\JS\jquery-migrate.min.js" />
+    <Content Include="AssestsLogin\JS\jquery.fancybox.js" />
+    <Content Include="AssestsLogin\JS\jquery.flexslider-min.js" />
+    <Content Include="AssestsLogin\JS\jquery.flexslider.js" />
+    <Content Include="AssestsLogin\JS\jquery.js" />
+    <Content Include="AssestsLogin\JS\js_composer_front.min.js" />
+    <Content Include="AssestsLogin\JS\menu.js" />
+    <Content Include="AssestsLogin\JS\style.switcher.js" />
+    <Content Include="AssestsLogin\JS\table.min.js" />
+    <Content Include="AssestsLogin\JS\themed-profiles.js" />
+    <Content Include="AssestsLogin\JS\vc-accordion.min.js" />
+    <Content Include="AssestsLogin\JS\vc-tabs.min.js" />
+    <Content Include="AssestsLogin\JS\vc-tta-autoplay.min.js" />
+    <Content Include="AssestsLogin\JS\wp-embed.min.js" />
+    <Content Include="assets\css\bootstrappart.css" />
+    <Content Include="assets\css\portal.css" />
+    <Content Include="assets\css\StyleSheet.css" />
+    <Content Include="assets\images\bg1.png" />
+    <Content Include="assets\images\Loader.gif" />
+    <Content Include="assets\images\loginloader.gif" />
+    <Content Include="assets\js\jquery-3.5.0.min.js" />
+    <Content Include="bin\AntiXssLibrary.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\BouncyCastle.Crypto.dll" />
+    <Content Include="bin\ByteEncryption.dll" />
+    <Content Include="bin\Common.Logging.Core.dll" />
+    <Content Include="bin\Common.Logging.dll" />
+    <Content Include="bin\Crc32C.NET.dll" />
+    <Content Include="bin\DnsClient.dll" />
+    <Content Include="bin\Encryption.dll" />
+    <Content Include="bin\GoaSocietyRegistration.dll" />
+    <Content Include="bin\GoaSocietyRegistration.pdb" />
+    <Content Include="bin\GoaSocietyRegistration.XmlSerializers.dll" />
+    <Content Include="bin\HtmlSanitizationLibrary.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.mshtml.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\MongoDB.Bson.dll" />
+    <Content Include="bin\MongoDB.Driver.Core.dll" />
+    <Content Include="bin\MongoDB.Driver.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Npgsql.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\SharpCompress.dll" />
+    <Content Include="bin\Snappy.NET.dll" />
+    <Content Include="bin\Syncfusion.Compression.Base.dll" />
+    <Content Include="bin\Syncfusion.HtmlConverter.Base.dll" />
+    <Content Include="bin\Syncfusion.Pdf.Base.dll" />
+    <Content Include="bin\System.Buffers.dll" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\System.IO.dll" />
+    <Content Include="bin\System.Memory.dll" />
+    <Content Include="bin\System.Net.Http.dll" />
+    <Content Include="bin\System.Numerics.Vectors.dll" />
+    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\System.Runtime.dll" />
+    <Content Include="bin\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\System.ValueTuple.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="bin\WS_Encryption.dll" />
+    <Content Include="chart\societychart.js" />
+    <Content Include="contactus.html" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Feedback.aspx" />
+    <Content Include="Guidelines.html" />
+    <Content Include="Login_Assets\css\font-awesome.min.css" />
+    <Content Include="momo.aspx" />
+    <Content Include="Organization\AddOldSociety.aspx" />
+    <Content Include="Organization\AdminUser.aspx" />
+    <Content Include="Organization\AllServices.aspx" />
+    <Content Include="Organization\ApplicationAudit.aspx" />
+    <Content Include="Organization\ApproveDSC.aspx" />
+    <Content Include="Organization\assets\css\icons.css" />
+    <Content Include="Organization\assets\js\jquery.js" />
+    <Content Include="Organization\CancelRegistration.aspx" />
+    <Content Include="Organization\CertifiedCopy.aspx" />
+    <Content Include="Organization\ChangeMobile.aspx" />
+    <Content Include="Organization\ChangeofFees.aspx" />
+    <Content Include="Organization\ChangePassword.aspx" />
+    <Content Include="Organization\CreateUser.aspx" />
+    <Content Include="Organization\Digital\CreatePDF.aspx" />
+    <Content Include="Organization\Digital\DSCRegister.aspx" />
+    <Content Include="Organization\Digital\Public.aspx" />
+    <Content Include="Organization\Digital\VerifyRegister.aspx" />
+    <Content Include="Organization\DisableLogin.aspx" />
+    <Content Include="Organization\EchallanStatus.aspx" />
+    <Content Include="Organization\EditSocietyDetails.aspx" />
+    <Content Include="Organization\GeneralUpload.aspx" />
+    <Content Include="Organization\GenerateCertificate.aspx" />
+    <Content Include="Organization\GeneratePassword.aspx" />
+    <Content Include="Organization\oldCertificate.aspx" />
+    <Content Include="Organization\PendingApplications.aspx" />
+    <Content Include="Organization\PrintCertifiedCopy.aspx" />
+    <Content Include="Organization\Search.aspx" />
+    <Content Include="Organization\SocietyAmendment.aspx" />
+    <Content Include="Organization\SocietyList.aspx" />
+    <Content Include="Organization\VerifyAmendment.aspx" />
+    <Content Include="Organization\VerifySociety.aspx" />
+    <Content Include="Organization\ViewFeedback.aspx" />
+    <Content Include="Organization\ViewPdf.aspx" />
+    <Content Include="assets\css\loginstyle.css" />
+    <Content Include="Organization\ApproveSociety.aspx" />
+    <Content Include="Organization\assets\css\animate.css" />
+    <Content Include="Organization\assets\bootstrap-datepicker.js" />
+    <Content Include="Organization\assets\bootstrap.min.css" />
+    <Content Include="Organization\assets\css\infoboxcss.css" />
+    <Content Include="Organization\assets\css\main.css" />
+    <Content Include="Organization\assets\css\materialize.css" />
+    <Content Include="Organization\assets\css\util.css" />
+    <Content Include="Organization\assets\font-awesome.css" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Organization\assets\fonts\montserrat\OFL.txt" />
+    <Content Include="Organization\assets\images\iconic_logo_v1.png" />
+    <Content Include="Organization\assets\images\icons\favicon.ico" />
+    <Content Include="Organization\assets\images\nic-logo.png" />
+    <Content Include="Organization\assets\js\jquery.countTo.js" />
+    <Content Include="Organization\assets\js\main.js" />
+    <Content Include="Organization\assets\js\waves.js" />
+    <Content Include="Organization\assets\style.css" />
+    <Content Include="Organization\assets\vendor\animate\animate.css" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Organization\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Organization\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Organization\assets\vendor\bootstrap\js\popper.js" />
+    <Content Include="Organization\assets\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Organization\assets\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Organization\assets\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Organization\assets\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Organization\assets\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Organization\assets\vendor\select2\select2.css" />
+    <Content Include="Organization\assets\vendor\select2\select2.js" />
+    <Content Include="Organization\assets\vendor\select2\select2.min.css" />
+    <Content Include="Organization\assets\vendor\select2\select2.min.js" />
+    <Content Include="Organization\assets\vendor\tilt\tilt.jquery.min.js" />
+    <Content Include="Organization\Dashboard.aspx" />
+    <Content Include="Applicant.aspx" />
+    <Content Include="Organization\ViewProfile.aspx" />
+    <Content Include="PublicDashboard.aspx" />
+    <Content Include="ScreenReaderAccess.html" />
+    <Content Include="Scripts\aes.js" />
+    <Content Include="Scripts\all.js" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dscsign.js" />
+    <Content Include="Scripts\dscsignRegister.js" />
+    <Content Include="Scripts\dscsignThirdParty.js" />
+    <Content Include="Scripts\dscsignTP.js" />
+    <Content Include="Scripts\encrypt.js" />
+    <Content Include="ENCRYPT.KEY" />
+    <Content Include="eChallan.pdf" />
+    <Content Include="eChallanPdf.pdf" />
+    <Content Include="eReceipt.pdf" />
+    <Content Include="Scripts\loader.js" />
+    <Content Include="site-map.html" />
+    <Content Include="User\Amendment.aspx" />
+    <Content Include="User\ApplyCertifiedCopy.aspx" />
+    <Content Include="User\MemorandumOfAssociation.aspx" />
+    <Content Include="User\NormalMembers.aspx" />
+    <Content Include="User\OtherServices.aspx" />
+    <Content Include="Download\UserManual.pdf" />
+    <Content Include="Download\ByLaws.pdf" />
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\GoaSocietyRegistration.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="Login_Assets\fonts\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" />
+    <Content Include="Login_Assets\fonts\KFOmCnqEu92Fr1Mu72xKOzY.woff2" />
+    <Content Include="Login_Assets\fonts\KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2" />
+    <Content Include="Login_Assets\fonts\KFOmCnqEu92Fr1Mu7GxKOzY.woff2" />
+    <Content Include="Login_Assets\fonts\KFOmCnqEu92Fr1Mu4mxK.woff2" />
+    <Content Include="Login_Assets\fonts\KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2" />
+    <Content Include="Login_Assets\fonts\KFOlCnqEu92Fr1MmWUlfBBc4.woff2" />
+    <Content Include="Download\DSCSign.zip" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="User\PaidEmployee.aspx" />
+    <Content Include="User\Schedule1.aspx" />
+    <Content Include="User\Schedule2.aspx" />
+    <Content Include="User\ScheduleVI.aspx" />
+    <None Include="Web References\PayOnlineRef\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PayOnlineRef\service.disco" />
+    <Content Include="VerifyCertificate.aspx" />
+    <Content Include="website-policies.html" />
+    <Content Include="ApplicationInsights.config" />
+    <None Include="Scripts\jquery-3.5.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.5.0.js" />
+    <Content Include="Scripts\jquery-3.5.0.min.js" />
+    <Content Include="Scripts\jquery-3.5.0.slim.js" />
+    <Content Include="Scripts\jquery-3.5.0.slim.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\Script.js" />
+    <Content Include="User\Application_registration.aspx" />
+    <Content Include="assets\css\all.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\images\client\client1.png" />
+    <Content Include="assets\images\client\client2.png" />
+    <Content Include="assets\images\client\client3.png" />
+    <Content Include="assets\images\client\client4.png" />
+    <Content Include="assets\images\client\client5.png" />
+    <Content Include="assets\images\client\client6.jpg" />
+    <Content Include="assets\images\client\gandhi.png" />
+    <Content Include="assets\images\client\goa.jpg" />
+    <Content Include="assets\images\client\makinindia.png" />
+    <Content Include="assets\images\client\nic.in.png" />
+    <Content Include="assets\images\digital-india1.png" />
+    <Content Include="assets\images\loading.gif" />
+    <Content Include="assets\images\pdf.png" />
+    <Content Include="assets\images\refresh.png" />
+    <Content Include="assets\images\refresh.gif" />
+    <Content Include="assets\images\error.png" />
+    <Content Include="assets\images\user.png" />
+    <Content Include="assets\js\bootstrap-3.3.7.min.js" />
+    <Content Include="assets\js\jquery-1.12.4.min.js" />
+    <Content Include="assets\js\jquery-2.2.0.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\slick.js" />
+    <Content Include="assets\style.css" />
+    <Content Include="User\Application_renewal.aspx" />
+    <Content Include="User\Dashboard.aspx" />
+    <Content Include="Development\admincaptcha.aspx" />
+    <Content Include="Development\GenerateCaptcha.aspx" />
+    <Content Include="User\DocumentUpload.aspx" />
+    <Content Include="error.aspx" />
+    <Content Include="Goa.png" />
+    <Content Include="User\InitiatePayment.aspx" />
+    <Content Include="User\LoginModule.aspx" />
+    <Content Include="Login_Assets\css\custom.css" />
+    <Content Include="Login_Assets\css\fontastic.css" />
+    <Content Include="Login_Assets\css\style.blue.css" />
+    <Content Include="Login_Assets\css\style.default.css" />
+    <Content Include="Login_Assets\css\style.green.css" />
+    <Content Include="Login_Assets\css\style.pink.css" />
+    <Content Include="Login_Assets\css\style.red.css" />
+    <Content Include="Login_Assets\css\style.sea.css" />
+    <Content Include="Login_Assets\css\style.violet.css" />
+    <Content Include="Login_Assets\fonts\dashboard.svg" />
+    <Content Include="Login_Assets\img\bg.jpg" />
+    <Content Include="Login_Assets\js\charts-custom.js" />
+    <Content Include="Login_Assets\js\charts-home.js" />
+    <Content Include="Login_Assets\js\front.js" />
+    <Content Include="Login_Assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Login_Assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Login_Assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Login_Assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Login_Assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Login_Assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Login_Assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Login_Assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Login_Assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Login_Assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Login_Assets\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Login_Assets\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Login_Assets\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login_Assets\vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Login_Assets\vendor\jquery-validation\additional-methods.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\additional-methods.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\jquery.validate.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\jquery.validate.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ar.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ar.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_az.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_az.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_bg.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_bg.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_bn_BD.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_bn_BD.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ca.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ca.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_cs.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_cs.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_da.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_da.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_de.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_de.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_el.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_el.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_es.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_es.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_es_AR.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_es_AR.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_es_PE.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_es_PE.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_et.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_et.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_eu.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_eu.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_fa.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_fa.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_fi.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_fi.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_fr.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_fr.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ge.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ge.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_gl.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_gl.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_he.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_he.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_hr.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_hr.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_hu.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_hu.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_hy_AM.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_hy_AM.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_id.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_id.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_is.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_is.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_it.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_it.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ja.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ja.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ka.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ka.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_kk.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_kk.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ko.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ko.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_lt.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_lt.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_lv.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_lv.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_mk.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_mk.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_my.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_my.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_nl.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_nl.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_no.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_no.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_pl.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_pl.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_pt_BR.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_pt_BR.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_pt_PT.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_pt_PT.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ro.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ro.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ru.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ru.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sd.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sd.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_si.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_si.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sk.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sk.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sl.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sl.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sr.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sr.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sr_lat.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sr_lat.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sv.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_sv.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_th.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_th.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_tj.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_tj.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_tr.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_tr.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_uk.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_uk.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ur.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_ur.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_vi.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_vi.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_zh.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_zh.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\messages_zh_TW.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_de.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_de.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_es_CL.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_es_CL.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_fi.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_fi.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_it.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_it.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_nl.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_nl.min.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_pt.js" />
+    <Content Include="Login_Assets\vendor\jquery-validation\localization\methods_pt.min.js" />
+    <Content Include="Login_Assets\vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="Login_Assets\vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="Login_Assets\vendor\jquery\core.js" />
+    <Content Include="Login_Assets\vendor\jquery\jquery.js" />
+    <Content Include="Login_Assets\vendor\jquery\jquery.min.js" />
+    <Content Include="Login_Assets\vendor\jquery\jquery.slim.js" />
+    <Content Include="Login_Assets\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Login_Assets\vendor\popper.js\esm\popper-utils.js" />
+    <Content Include="Login_Assets\vendor\popper.js\esm\popper-utils.min.js" />
+    <Content Include="Login_Assets\vendor\popper.js\esm\popper.js" />
+    <Content Include="Login_Assets\vendor\popper.js\esm\popper.min.js" />
+    <Content Include="Login_Assets\vendor\popper.js\popper-utils.js" />
+    <Content Include="Login_Assets\vendor\popper.js\popper-utils.min.js" />
+    <Content Include="Login_Assets\vendor\popper.js\popper.js" />
+    <Content Include="Login_Assets\vendor\popper.js\popper.min.js" />
+    <Content Include="Login_Assets\vendor\popper.js\umd\popper-utils.js" />
+    <Content Include="Login_Assets\vendor\popper.js\umd\popper-utils.min.js" />
+    <Content Include="Login_Assets\vendor\popper.js\umd\popper.js" />
+    <Content Include="Login_Assets\vendor\popper.js\umd\popper.min.js" />
+    <Content Include="User\MemberDetails.aspx" />
+    <Content Include="OrganizationLogin.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Organization\Registration.aspx" />
+    <Content Include="User\PaymentSuccess.aspx" />
+    <Content Include="User\Society.Master" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Login_Assets\fonts\dashboard.eot" />
+    <Content Include="Login_Assets\fonts\dashboard.ttf" />
+    <Content Include="Login_Assets\fonts\dashboard.woff" />
+    <Content Include="Login_Assets\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login_Assets\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login_Assets\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login_Assets\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login_Assets\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Login_Assets\vendor\jquery.cookie\component.json" />
+    <Content Include="Login_Assets\vendor\jquery.cookie\cookie.jquery.json" />
+    <Content Include="Login_Assets\vendor\popper.js\umd\poppper.js.flow" />
+    <Content Include="Admin\assets\css\typicons.eot" />
+    <Content Include="Admin\assets\css\typicons.ttf" />
+    <Content Include="Admin\assets\css\typicons.woff" />
+    <Content Include="NOTARY.KEY" />
+    <Content Include="Development\eReceipt.pdf" />
+    <Content Include="Development\eChallan.pdf" />
+    <Content Include="Development\eChallanPdf.pdf" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\assets\fonts\FontAwesome.otf" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Admin\assets\adminstyle\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Organization\assets\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="Organization\assets\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Organization\assets\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Organization\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Organization\admin.Master" />
+    <Content Include="AssestsLogin\fonts\1YwB1sO8YE1Lyjf12WNiUA.woff2" />
+    <Content Include="AssestsLogin\fonts\9k-RPmcnxYEPm8CNFsH2gg.woff" />
+    <Content Include="AssestsLogin\fonts\BVtM30trf7q_jfqYeHfjtA.woff" />
+    <Content Include="AssestsLogin\fonts\cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff" />
+    <Content Include="AssestsLogin\fonts\cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2" />
+    <Content Include="AssestsLogin\fonts\DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="AssestsLogin\fonts\DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff" />
+    <Content Include="AssestsLogin\fonts\EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff" />
+    <Content Include="AssestsLogin\fonts\EInbV5DfGHOiMmvb1Xr-hugdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="AssestsLogin\fonts\EsvMC5un3kjyUhB9ZEPPwg.woff2" />
+    <Content Include="AssestsLogin\fonts\flexslider-icon.eot" />
+    <Content Include="AssestsLogin\fonts\flexslider-icon.ttf" />
+    <Content Include="AssestsLogin\fonts\flexslider-icon.woff" />
+    <Content Include="AssestsLogin\fonts\flexslider-icond41d.eot" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont93e3.eot" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont93e3.ttf" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont93e3.woff" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfont93e3.woff2" />
+    <Content Include="AssestsLogin\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="AssestsLogin\fonts\H2DMvhDLycM56KNuAtbJYA.woff2" />
+    <Content Include="AssestsLogin\fonts\icomooncb5a.eot" />
+    <Content Include="AssestsLogin\fonts\icomooncb5a.ttf" />
+    <Content Include="AssestsLogin\fonts\icomooncb5a.woff" />
+    <Content Include="AssestsLogin\fonts\k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff" />
+    <Content Include="AssestsLogin\fonts\k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="AssestsLogin\fonts\KT3KS9Aol4WfR6Vas8kNcg.woff" />
+    <Content Include="AssestsLogin\fonts\LineIcons.eot" />
+    <Content Include="AssestsLogin\fonts\LineIcons.ttf" />
+    <Content Include="AssestsLogin\fonts\LineIcons.woff" />
+    <Content Include="AssestsLogin\fonts\MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff" />
+    <Content Include="AssestsLogin\fonts\MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="AssestsLogin\fonts\notosans-regular-webfont.woff" />
+    <Content Include="AssestsLogin\fonts\notosans-regular-webfont.woff2" />
+    <Content Include="AssestsLogin\fonts\ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff" />
+    <Content Include="AssestsLogin\fonts\ODelI1aHBYDBqgeIAH2zlNV_2ngZ8dMf8fLgjYEouxg.woff2" />
+    <Content Include="AssestsLogin\fonts\tI4j516nok_GrVf4dhunkg.woff2" />
+    <Content Include="AssestsLogin\fonts\toadOcfmlt9b38dHJxOBGCOFnW3Jk0f09zW_Yln67Ac.woff2" />
+    <Content Include="AssestsLogin\fonts\toadOcfmlt9b38dHJxOBGEo0As1BFRXtCDhS66znb_k.woff2" />
+    <Content Include="AssestsLogin\fonts\toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff" />
+    <Content Include="AssestsLogin\fonts\toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff" />
+    <Content Include="AssestsLogin\fonts\toadOcfmlt9b38dHJxOBGHZhYM0_6AejPZE-OqA592o.woff2" />
+    <Content Include="AssestsLogin\fonts\toadOcfmlt9b38dHJxOBGJ6-ys_j0H4QL65VLqzI3wI.woff" />
+    <Content Include="AssestsLogin\fonts\toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff" />
+    <Content Include="AssestsLogin\fonts\toadOcfmlt9b38dHJxOBGOode0-EuMkY--TSyExeINg.woff2" />
+    <Content Include="AssestsLogin\fonts\wkfQbvfT_02e2IWO3yYueQ.woff" />
+    <None Include="Properties\PublishProfiles\society.pubxml" />
+    <Content Include="User\ViewApplicantDetails.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="RTO.KEY" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="Scripts\jquery-3.5.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.5.0.min.map" />
+    <Content Include="SelectedFile.pdf" />
+    <None Include="Web References\PayOnlineRef\service.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\font-awesome\css\all.css" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="assets\css\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\images\digital-india.png" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\Goa.png" />
+    <Content Include="assets\images\logo-nic.png" />
+    <Content Include="assets\images\make-in-india-header.png" />
+    <Content Include="assets\images\swachh-bharat.png" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-3.2.1.slim.min.js" />
+    <Content Include="assets\js\popper.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="User\SocietyDetails.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Aadhar.cs" />
+    <Compile Include="Development\CreateLogFiles.cs" />
+    <Compile Include="Development\Member_Details.cs" />
+    <Compile Include="Development\OnlinePaymentDetails.cs" />
+    <Compile Include="Development\Page_status_Check.cs" />
+    <Compile Include="Development\PDFiumWrapper.cs" />
+    <Compile Include="Development\Sanitize.cs" />
+    <Compile Include="Development\SendSms.cs" />
+    <Compile Include="Development\SessionManage.cs" />
+    <Compile Include="Development\Society_Details.cs" />
+    <Compile Include="Development\Society_Certificate.cs" />
+    <Compile Include="Development\SurroundingClass.cs" />
+    <Compile Include="Development\Temp_table.cs" />
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="momo.aspx.cs">
+      <DependentUpon>momo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="momo.aspx.designer.cs">
+      <DependentUpon>momo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\AddOldSociety.aspx.cs">
+      <DependentUpon>AddOldSociety.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\AddOldSociety.aspx.designer.cs">
+      <DependentUpon>AddOldSociety.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\AdminUser.aspx.cs">
+      <DependentUpon>AdminUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\AdminUser.aspx.designer.cs">
+      <DependentUpon>AdminUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\AllServices.aspx.cs">
+      <DependentUpon>AllServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\AllServices.aspx.designer.cs">
+      <DependentUpon>AllServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ApplicationAudit.aspx.cs">
+      <DependentUpon>ApplicationAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ApplicationAudit.aspx.designer.cs">
+      <DependentUpon>ApplicationAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ApproveDSC.aspx.cs">
+      <DependentUpon>ApproveDSC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ApproveDSC.aspx.designer.cs">
+      <DependentUpon>ApproveDSC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\CancelRegistration.aspx.cs">
+      <DependentUpon>CancelRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\CancelRegistration.aspx.designer.cs">
+      <DependentUpon>CancelRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\CertifiedCopy.aspx.cs">
+      <DependentUpon>CertifiedCopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\CertifiedCopy.aspx.designer.cs">
+      <DependentUpon>CertifiedCopy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ChangeMobile.aspx.cs">
+      <DependentUpon>ChangeMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ChangeMobile.aspx.designer.cs">
+      <DependentUpon>ChangeMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ChangeofFees.aspx.cs">
+      <DependentUpon>ChangeofFees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ChangeofFees.aspx.designer.cs">
+      <DependentUpon>ChangeofFees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\Digital\CreatePDF.aspx.cs">
+      <DependentUpon>CreatePDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\Digital\CreatePDF.aspx.designer.cs">
+      <DependentUpon>CreatePDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\Digital\Design\APIResponse.cs" />
+    <Compile Include="Organization\Digital\Design\CardData.cs" />
+    <Compile Include="Organization\Digital\Design\SignatureUserData.cs" />
+    <Compile Include="Organization\Digital\Design\SigVerify.cs" />
+    <Compile Include="Organization\Digital\DSCRegister.aspx.cs">
+      <DependentUpon>DSCRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\Digital\DSCRegister.aspx.designer.cs">
+      <DependentUpon>DSCRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\Digital\Design\DSCSign.cs" />
+    <Compile Include="Organization\Digital\Public.aspx.cs">
+      <DependentUpon>Public.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\Digital\Public.aspx.designer.cs">
+      <DependentUpon>Public.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\Digital\VerifyRegister.aspx.cs">
+      <DependentUpon>VerifyRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\Digital\VerifyRegister.aspx.designer.cs">
+      <DependentUpon>VerifyRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\DisableLogin.aspx.cs">
+      <DependentUpon>DisableLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\DisableLogin.aspx.designer.cs">
+      <DependentUpon>DisableLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\EchallanStatus.aspx.cs">
+      <DependentUpon>EchallanStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\EchallanStatus.aspx.designer.cs">
+      <DependentUpon>EchallanStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\EditSocietyDetails.aspx.cs">
+      <DependentUpon>EditSocietyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\EditSocietyDetails.aspx.designer.cs">
+      <DependentUpon>EditSocietyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\GeneralUpload.aspx.cs">
+      <DependentUpon>GeneralUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\GeneralUpload.aspx.designer.cs">
+      <DependentUpon>GeneralUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\GenerateCertificate.aspx.cs">
+      <DependentUpon>GenerateCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\GenerateCertificate.aspx.designer.cs">
+      <DependentUpon>GenerateCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\GeneratePassword.aspx.cs">
+      <DependentUpon>GeneratePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\GeneratePassword.aspx.designer.cs">
+      <DependentUpon>GeneratePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\oldCertificate.aspx.cs">
+      <DependentUpon>oldCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\oldCertificate.aspx.designer.cs">
+      <DependentUpon>oldCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\PendingApplications.aspx.cs">
+      <DependentUpon>PendingApplications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\PendingApplications.aspx.designer.cs">
+      <DependentUpon>PendingApplications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\PrintCertifiedCopy.aspx.cs">
+      <DependentUpon>PrintCertifiedCopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\PrintCertifiedCopy.aspx.designer.cs">
+      <DependentUpon>PrintCertifiedCopy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\SocietyAmendment.aspx.cs">
+      <DependentUpon>SocietyAmendment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\SocietyAmendment.aspx.designer.cs">
+      <DependentUpon>SocietyAmendment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\SocietyList.aspx.cs">
+      <DependentUpon>SocietyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\SocietyList.aspx.designer.cs">
+      <DependentUpon>SocietyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\VerifyAmendment.aspx.cs">
+      <DependentUpon>VerifyAmendment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\VerifyAmendment.aspx.designer.cs">
+      <DependentUpon>VerifyAmendment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\VerifySociety.aspx.cs">
+      <DependentUpon>VerifySociety.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\VerifySociety.aspx.designer.cs">
+      <DependentUpon>VerifySociety.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ViewFeedback.aspx.cs">
+      <DependentUpon>ViewFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ViewFeedback.aspx.designer.cs">
+      <DependentUpon>ViewFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ViewPdf.aspx.cs">
+      <DependentUpon>ViewPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ViewPdf.aspx.designer.cs">
+      <DependentUpon>ViewPdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ApproveSociety.aspx.cs">
+      <DependentUpon>ApproveSociety.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ApproveSociety.aspx.designer.cs">
+      <DependentUpon>ApproveSociety.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applicant.aspx.cs">
+      <DependentUpon>Applicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applicant.aspx.designer.cs">
+      <DependentUpon>Applicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organization\ViewProfile.aspx.cs">
+      <DependentUpon>ViewProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\ViewProfile.aspx.designer.cs">
+      <DependentUpon>ViewProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PublicDashboard.aspx.cs">
+      <DependentUpon>PublicDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicDashboard.aspx.designer.cs">
+      <DependentUpon>PublicDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\Amendment.aspx.cs">
+      <DependentUpon>Amendment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Amendment.aspx.designer.cs">
+      <DependentUpon>Amendment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Application_registration.aspx.cs">
+      <DependentUpon>Application_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Application_registration.aspx.designer.cs">
+      <DependentUpon>Application_registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Application_renewal.aspx.cs">
+      <DependentUpon>Application_renewal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Application_renewal.aspx.designer.cs">
+      <DependentUpon>Application_renewal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ApplyCertifiedCopy.aspx.cs">
+      <DependentUpon>ApplyCertifiedCopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ApplyCertifiedCopy.aspx.designer.cs">
+      <DependentUpon>ApplyCertifiedCopy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\admincaptcha.aspx.cs">
+      <DependentUpon>admincaptcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\admincaptcha.aspx.designer.cs">
+      <DependentUpon>admincaptcha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\EchallanReceipt.cs" />
+    <Compile Include="Development\FetchDetails.cs" />
+    <Compile Include="Development\GenerateCaptcha.aspx.cs">
+      <DependentUpon>GenerateCaptcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\GenerateCaptcha.aspx.designer.cs">
+      <DependentUpon>GenerateCaptcha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\GetData.cs" />
+    <Compile Include="Development\UsersAuditTrails.cs" />
+    <Compile Include="User\DocumentUpload.aspx.cs">
+      <DependentUpon>DocumentUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\DocumentUpload.aspx.designer.cs">
+      <DependentUpon>DocumentUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\GlobalVars.cs" />
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\InitiatePayment.aspx.cs">
+      <DependentUpon>InitiatePayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\InitiatePayment.aspx.designer.cs">
+      <DependentUpon>InitiatePayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Insert.cs" />
+    <Compile Include="User\LoginModule.aspx.cs">
+      <DependentUpon>LoginModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\LoginModule.aspx.designer.cs">
+      <DependentUpon>LoginModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MemberDetails.aspx.cs">
+      <DependentUpon>MemberDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MemberDetails.aspx.designer.cs">
+      <DependentUpon>MemberDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\MemberDocs.cs" />
+    <Compile Include="Development\OtherDocuments.cs" />
+    <Compile Include="Development\PayUserDetails.cs" />
+    <Compile Include="Development\Utility.cs" />
+    <Compile Include="Development\Validate.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationLogin.aspx.cs">
+      <DependentUpon>OrganizationLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrganizationLogin.aspx.designer.cs">
+      <DependentUpon>OrganizationLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Organization\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organization\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MemorandumOfAssociation.aspx.cs">
+      <DependentUpon>MemorandumOfAssociation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MemorandumOfAssociation.aspx.designer.cs">
+      <DependentUpon>MemorandumOfAssociation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\NormalMembers.aspx.cs">
+      <DependentUpon>NormalMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\NormalMembers.aspx.designer.cs">
+      <DependentUpon>NormalMembers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\OtherServices.aspx.cs">
+      <DependentUpon>OtherServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\OtherServices.aspx.designer.cs">
+      <DependentUpon>OtherServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PaidEmployee.aspx.cs">
+      <DependentUpon>PaidEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PaidEmployee.aspx.designer.cs">
+      <DependentUpon>PaidEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PaymentSuccess.aspx.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PaymentSuccess.aspx.designer.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Schedule1.aspx.cs">
+      <DependentUpon>Schedule1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Schedule1.aspx.designer.cs">
+      <DependentUpon>Schedule1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Schedule2.aspx.cs">
+      <DependentUpon>Schedule2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Schedule2.aspx.designer.cs">
+      <DependentUpon>Schedule2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ScheduleVI.aspx.cs">
+      <DependentUpon>ScheduleVI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ScheduleVI.aspx.designer.cs">
+      <DependentUpon>ScheduleVI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Society.Master.cs">
+      <DependentUpon>Society.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Society.Master.designer.cs">
+      <DependentUpon>Society.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\SocietyDetails.aspx.cs">
+      <DependentUpon>SocietyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\SocietyDetails.aspx.designer.cs">
+      <DependentUpon>SocietyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewApplicantDetails.aspx.cs">
+      <DependentUpon>ViewApplicantDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ViewApplicantDetails.aspx.designer.cs">
+      <DependentUpon>ViewApplicantDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyCertificate.aspx.cs">
+      <DependentUpon>VerifyCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerifyCertificate.aspx.designer.cs">
+      <DependentUpon>VerifyCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PayOnlineRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\assets\adminstyle\fonts\" />
+    <Folder Include="Admin\assets\adminstyle\images\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Models\" />
+    <Folder Include="obj\" />
+    <Folder Include="OutData\ScanPdf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://echallanws.goa.gov.in/service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PayOnlineRef\</RelPath>
+      <UpdateFromURL>https://echallanws.goa.gov.in/service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GoaSocietyRegistration_PayOnlineRef_service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>36695</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:36695/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.17.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.17.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.17.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.17.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.17.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.17.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.2.17.0\build\Microsoft.ApplicationInsights.WindowsServer.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.WindowsServer.2.17.0\build\Microsoft.ApplicationInsights.WindowsServer.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.Web.2.17.0\build\Microsoft.ApplicationInsights.Web.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.Web.2.17.0\build\Microsoft.ApplicationInsights.Web.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.17.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.17.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.17.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.17.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.17.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.17.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.WindowsServer.2.17.0\build\Microsoft.ApplicationInsights.WindowsServer.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.2.17.0\build\Microsoft.ApplicationInsights.WindowsServer.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.Web.2.17.0\build\Microsoft.ApplicationInsights.Web.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.Web.2.17.0\build\Microsoft.ApplicationInsights.Web.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,876 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Online Society Registration Portal" />
+    <meta name="keywords" content="Society Registration Portal,Society  Registration" />
+    <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16" />
+    <title>Society Registration Portal</title>
+    <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16" />
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url("Assests/Default/fonts/icomooncb5a.eot?y6palq");
+            src: url("Assests/Default/fonts/icomooncb5a.eot?y6palq#iefix") format("embedded-opentype"), url("Assests/Default/fonts/icomooncb5a.ttf?y6palq") format("truetype"), url("Assests/Default/fonts/icomooncb5a.woff?y6palq") format("woff"), url("Assests/Default/fonts/icomooncb5a.svg?y6palq#icomoon") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+
+        .mya {
+            text-decoration: none !important;
+        }
+
+        .col-md-3 {
+            width: 30%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .col-xs-12 {
+                width: 100%;
+            }
+        }
+    </style>
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        .myheight {
+            height: 262px;
+        }
+
+        .pricing {
+            position: relative;
+            margin-bottom: 15px;
+            border: 3px solid #eee;
+            width: 100%;
+        }
+
+            .pricing:hover {
+                border: 3px solid #3C7D14;
+            }
+
+        .content-page .list-unstyled li {
+            margin-bottom: 3px;
+        }
+
+        .pricing-content li {
+            color: #888;
+            font-size: 12px;
+            padding: 7px 15px;
+            border-bottom: solid 1px #f5f9e7;
+        }
+
+        .price-active, .pricing:hover {
+            z-index: 9;
+        }
+
+        .pricing-head {
+            text-align: center;
+        }
+
+            .pricing-head h3 {
+                background: #3C7D14;
+            }
+
+            .pricing-head h3 {
+                font-weight: 300;
+                color: #fafafa;
+                padding: 12px 0;
+                font-size: 27px;
+                background: #48931bb3;
+                border-bottom: none;
+            }
+
+            .pricing-head h3, .pricing-head h4 {
+                margin: 0;
+                line-height: normal;
+            }
+
+        .content-page h3 {
+            font-size: 20px;
+            margin-bottom: 7px;
+        }
+
+        .content-page h2, .content-page h3, .content-page h4, .content-page h5, .content-page h6 {
+            /* text-transform: inherit; */
+            padding-top: 10px;
+        }
+
+        .content-page p, .content-page .list-unstyled {
+            margin-bottom: 20px;
+        }
+    </style>
+<script src="Scripts/jquery-3.5.0.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <link href="AssestsLogin/CSS/thememylogin.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/style.min.css" rel="stylesheet" media='all' />
+
+    <link href="AssestsLogin/CSS/extra.features.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/style.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/style1.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/js_composer.min.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/fontawsome.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/base.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/extra.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/sliderhelper.css" rel="stylesheet" media='all' />
+
+
+    <link href="AssestsLogin/CSS/styles.css" rel="stylesheet" media='all' />
+    <script src='AssestsLogin/JS/jquery-migrate.min.js'></script>
+    <script src='AssestsLogin/JS/themed-profiles.js'></script>
+    <script src='AssestsLogin/JS/external.js'></script>
+
+    <noscript>
+        <style>
+            #topBar #accessibility ul li .goiSearch, #topBar1 #accessibility ul li .goiSearch {
+                visibility: visible;
+            }
+
+            #topBar #accessibility ul li .socialIcons ul, #topBar1 #accessibility ul li .socialIcons ul {
+                background: #fff !important;
+            }
+
+            #topBar #accessibility ul li .goiSearch, #topBar1 #accessibility ul li .goiSearch {
+                right: 0;
+                left: inherit;
+            }
+
+            .nav li a:focus > ul {
+                left: 0;
+                opacity: 0.99;
+            }
+
+            a:focus, button:focus, .carasoleflex-wrap .flexslider .slides > li a:focus, .flexslider .slides > li a:focus {
+                outline: 3px solid #ff8c00 !important;
+            }
+
+            .flexslider .slides > li {
+                display: block;
+            }
+
+            .nav li.active > a, .nav li > a:hover, .nav li > a:focus, .nav ul li a:hover,
+            .mva7-thc-activetheme-district-theme-13 .nav li:hover > a, .mva7-thc-activetheme-district-theme-13 .nav li.active > a, .home-13 .nav li:hover > a, .home-13 .nav li.active > a {
+                color: #ffffff;
+            }
+
+            .nav li:hover > a {
+                border-top: none;
+                color: #ffffff;
+            }
+
+            .nav li.active > a {
+                border: 0;
+            }
+
+            .nav ul {
+                opacity: 1;
+                left: 0;
+                position: static !important;
+                width: auto;
+                border: 0;
+            }
+
+            .nav li {
+                position: static !important;
+                display: block;
+                float: none;
+                border: 0 !important;
+            }
+
+                .nav li > a {
+                    float: none;
+                    display: block;
+                    background-color: rgba(146,38,4,0.75) !important;
+                    color: #ffffff;
+                    margin: 0;
+                    padding: 12px 20px !important;
+                    border-radius: 0;
+                    border-bottom: 1px solid #ffffff !important;
+                    position: static !important;
+                    border-top: 0;
+                    font-size: 14px !important;
+                }
+
+            .nav ul.sub-menu li > a {
+                background-color: rgba(146,38,4,1);
+                font-size: 12px !important;
+            }
+
+            ul li .socialIcons {
+                visibility: visible !important;
+            }
+
+            .nav li > a,
+            .nav li.active > a {
+                background-color: #9e6b22 !important;
+            }
+
+            .nav ul.sub-menu li > a {
+                background-color: #f3b45b !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-15 .menuWrapper {
+                background-color: #ffffff;
+            }
+
+            .mva7-thc-activetheme-district-theme-2 .nav li > a,
+            .mva7-thc-activetheme-district-theme-2 .nav li.active > a {
+                background-color: rgba(63,77,184,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-2 .nav ul.sub-menu li > a {
+                background-color: rgba(63,77,184,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-3 .nav li > a,
+            .mva7-thc-activetheme-district-theme-3 .nav li.active > a,
+            .mva7-thc-activetheme-district-theme-5 .nav li > a,
+            .mva7-thc-activetheme-district-theme-5 .nav li.active > a {
+                background-color: rgba(212,60,60,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-3 .nav ul.sub-menu li > a,
+            .mva7-thc-activetheme-district-theme-5 .nav ul.sub-menu li > a {
+                background-color: rgba(212,60,60,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-4 .nav li > a,
+            .mva7-thc-activetheme-district-theme-4 .nav li.active > a {
+                background-color: rgba(184,48,88,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-4 .nav ul.sub-menu li > a {
+                background-color: rgba(184,48,88,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-6 .nav li > a,
+            .mva7-thc-activetheme-district-theme-6 .nav li.active > a {
+                background-color: rgba(16,91,122,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-6 .nav ul.sub-menu li > a {
+                background-color: rgba(16,91,122,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-7 .nav li > a,
+            .mva7-thc-activetheme-district-theme-7 .nav li.active > a {
+                background-color: rgba(2,20,80,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-7 .nav ul.sub-menu li > a {
+                background-color: rgba(2,20,80,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-8 .nav li > a,
+            .mva7-thc-activetheme-district-theme-8 .nav li.active > a {
+                background-color: rgba(0,144,145,0.65) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-8 .nav ul.sub-menu li > a {
+                background-color: rgba(0,144,145,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-9 .nav li > a,
+            .mva7-thc-activetheme-district-theme-9 .nav li.active > a {
+                background-color: rgba(60,125,20,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-9 .nav ul.sub-menu li > a {
+                background-color: rgba(60,125,20,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-10 .nav li > a,
+            .mva7-thc-activetheme-district-theme-10 .nav li.active > a {
+                background-color: rgba(233,13,65,0.70) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-10 .nav ul.sub-menu li > a {
+                background-color: rgba(233,13,65,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-11 .nav li > a,
+            .mva7-thc-activetheme-district-theme-11 .nav li.active > a {
+                background-color: rgba(104,57,127,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-11 .nav ul.sub-menu li > a {
+                background-color: rgba(104,57,127,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-13 .nav li > a,
+            .mva7-thc-activetheme-district-theme-13 .nav li.active > a {
+                background-color: rgba(0,0,0,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-13 .nav ul.sub-menu li > a {
+                background-color: rgba(0,0,0,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-14 .nav li > a,
+            .mva7-thc-activetheme-district-theme-14 .nav li.active > a {
+                background-color: rgba(0,120,175,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-14 .nav ul.sub-menu li > a {
+                background-color: rgba(0,120,175,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-15 .nav li > a,
+            .mva7-thc-activetheme-district-theme-15 .nav li.active > a {
+                background-color: rgba(150,86,104,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-15 .nav ul.sub-menu li > a {
+                background-color: rgba(150,86,104,1) !important;
+            }
+
+            y
+            /*for high contrast css*/
+            .contrast #topBar #accessibility ul li .socialIcons ul, .contrast #topBar1 #accessibility ul li .socialIcons ul,
+            .contrast .nav li > a, .contrast .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-2 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-6 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-7 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-8 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-9 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-10 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-11 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-13 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-14 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-15 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-2 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-2 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-2 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-3 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-3 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-5 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-5 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-3 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-5 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-4 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-4 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-4 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-6 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-6 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-6 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-7 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-7 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-7 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-8 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-8 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-8 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-9 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-9 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-9 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-10 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-10 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-10 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-11 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-11 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-11 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-13 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-13 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-13 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-14 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-14 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-14 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-15 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-15 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-15 .nav ul.sub-menu li > a,
+            body.contrast {
+                background-color: #000 !important;
+            }
+
+            .contrast a, .contrast .socialIcons.select-lang a {
+                color: #ffff00 !important;
+            }
+
+            body.contrast, .contrast p, .contrast div, .contrast table {
+                color: #fff !important;
+            }
+        </style>
+		<style>
+        .tableWrapperResponsive
+        {
+            width: auto!important;
+            width: initial !important;
+            overflow:hidden!important;
+        }
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 90%;
+            color:cornflowerblue
+        }
+
+            #customers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #customers tr:hover {
+                background-color: #ddd;
+            }
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+               text-align:center;
+                background-color: #4CAF50;
+                color: white;
+            }
+            @media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	
+}
+    </style>
+    
+    </noscript>
+    <link rel="alternate" href="Default.aspx" hreflang="x-default" />
+    <link rel="alternate" href="Default.aspx" hreflang="en" />
+</head>
+
+<body class="page-template-default page page-id-1520 mva7-thc-activetheme-district-theme lang-en wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
+    <!--<header id="mainHeader">-->
+<header>
+            <div id="topBar" class="wrapper">
+                <div class="container">
+                    <div class="push-right" aria-label="Primary">
+                        <div id="accessibility">
+                            <ul id="accessibilityMenu">
+                                <li><a href="#SkipContent" class="skip-to-content" title="Skip to main content"><span class="icon-skip-to-main responsive-show"></span><strong class="responsive-hide">SKIP TO MAIN CONTENT</strong></a></li>
+
+                                <li>
+                                    <a href="javascript:void(0);" title="Accessibility Links" aria-label="Accessibility Links" class="mobile-show accessible-icon"><span class="off-css">Accessibility Links</span><span class="icon-accessibility" aria-hidden="true"></span></a>
+                                    <div class="accessiblelinks textSizing">
+                                        <ul>
+                                            <li><a href="javascript:void(0);" aria-label="Font Size Increase" title="Font Size Increase"><span aria-hidden="true">A+</span><span class="off-css"> Font Size Increase</span></a></li>
+                                            <li><a href="javascript:void(0);" aria-label="Normal Font" title="Normal Font"><span aria-hidden="true">A</span><span class="off-css"> Normal Font</span></a></li>
+                                            <li><a href="javascript:void(0);" aria-label="Font Size Decrease" title="Font Size Decrease"><span aria-hidden="true">A-</span><span class="off-css"> Font Size Decrease</span></a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:void(0);" class="change-language" aria-label="English" title="English">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="push-left">
+                        <div class="govBranding">
+                            <ul>
+                                <li><a href="https://www.goa.gov.in/">गोयें सरकार </a></li>
+                                <li><a lang="grt" href="https://www.goa.gov.in/">Government of Goa</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper header-wrapper">
+                <div class="container header-container">
+               <div class="logo">
+                        <a href="Default.aspx" aria-label="Go to home" class="emblem" rel="home">
+                            <img class="site_logo" height="100" id="logo" src="AssestsLogin/img/goa.png" alt="Goa State Emblem" />
+
+                            <div class="logo-text">
+                                <strong lang="grt" class="site_name_regional" style="font-weight: 700!important">Registration Of Societies</strong>
+                                <h1 class="site_name_english">Department of Registration ,Goa</h1>
+                                
+                            </div>
+                        </a>
+                    </div>
+
+                    <a class="menuToggle" href="javascript:void(0);" aria-label="Mobile Menu"><span class="icon-menu"></span><span class="tcon">Menu Toggle</span></a>
+                </div>
+            </div>
+            <div class="menuWrapper">
+                <div class="menuMoreText hide">More</div>
+                <div class="container">
+                    <nav class="menu">
+                        <ul id="menu-header-en" class="nav clearfix">
+                            <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2658  ">
+                                <a href="Default.aspx">Home</a>
+                            </li>
+                            <li id="menu-item-2659" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2658 ">
+                                <a href="aboutus.html">About Us</a></li>
+
+                            <li id="menu-item-2660" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2660">
+                                <a href="leaflet.pdf" target="_blank">Help</a>
+                            </li>
+                            <li id="menu-item-2494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2494 "><a href="contactus.html">Contact Us</a></li>
+                            <li id="menu-item-2495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2494"><a href="PublicDashboard.aspx">Public Dashboard</a></li>
+                            <li id="menu-item-2496" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2494"><a href="VerifyCertificate.aspx">Verifiy Certificate</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="overflowMenu">
+                <div class="ofMenu">
+                    <ul>
+                    </ul>
+                </div>
+                <a title="Close" href="javascript:void(0);" class="closeMenu"><span class="icon-close" aria-hidden="true"></span>Close</a>
+            </div>
+        </header>
+
+    <main>
+        <!--<div class="wrapper banner-wrapper innerBanner">
+            <img src="assets/img/innerBanner.jpg" alt="">
+        </div>-->
+
+        <div class="wrapper bodyWrapper " style="min-height:auto!important">
+            <div class="container ">
+
+                <div class="row breadcrumb-outer">
+
+                    <div class="left-content push-left">
+                        <div id="breadcam" role="navigation" aria-label="breadcrumb">
+                            <ul class="breadcrumbs"><li><a href="Default.aspx" class="home"><span>Home</span></a></li> <li class="current">Website Policies</li></ul>
+                        </div>
+                    </div>
+
+                    <div id="SkipContent"></div>
+
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+
+                        <h1>Website Policies</h1>
+                        <div id="post-1511" class="post-1511 page type-page status-publish hentry">
+                            <h2>Terms & Conditions</h2>
+                            <p style="text-align:justify">
+                                This Portal is designed, developed and hosted by <strong>
+                                    National Informatics Centre, Goa
+                                    State Unit
+                                </strong> and maintained by <strong>
+                                    Registration Department ,
+                                    Goa
+                                </strong>. Though all efforts have been made to ensure the accuracy and currency
+                                of the content on this Portal, the same should not be construed as a statement of law or
+                                used for any legal purposes.
+                            </p>
+                            <p style="text-align:justify">
+                                Though all efforts have been made to ensure the accuracy and currency of the content on
+                                this website, the same should not be construed as a statement of law or used for any
+                                legal purposes.
+                            </p>
+                            <p style="text-align:justify">
+                                In no event will the Registration Department, Goa be liable for any expense, loss or
+                                damage including, without limitation, indirect or consequential loss or damage, or any
+                                expense, loss or damage whatsoever arising from use, or loss of use, of data, arising
+                                out of or in connection with the use of this Portal.Links to other websites that have
+                                been included on this Portal are provided for public convenience only. No one is
+                                authorised to make any type of commercial usage like putting web advertisements or SMS
+                                service and Reproducing/Transmitting/Storing in its database, any content of this
+                                website, without prior written permission.These terms and conditions shall be governed
+                                by and construed in accordance with the Indian Laws. Any dispute arising under these
+                                terms and conditions shall be subject to the exclusive jurisdiction of the courts of
+                                India.
+                            </p>
+                            <h2>About the Site</h2>
+                            <p style="text-align:justify">
+                                This is the official website of <strong>Registration Department , Goa</strong>
+                                Government. The website provides Information of Society Acts along with their detailed
+                                information and services from Registration Department .The contact details of Office
+                                bearer for Registration Department are also available here.It is our endeavor to
+                                continue the enhancement and enrichment of this site in terms of its content, coverage,
+                                design and technology on a regular basis.
+                            </p>
+                            <h2>Copyright Policy</h2>
+                            <p style="text-align:justify">
+                                Material featured on this website may be reproduced free of charge after taking proper
+                                permission by sending a mail to us. However, the material has to be reproduced
+                                accurately and not to be used in a derogatory manner or in a misleading context.
+                                Wherever the material is being published or issued to others, the source must be
+                                prominently acknowledged. However, the permission to reproduce this material shall not
+                                extend to any material which is identified as being copyright of a third party.
+                                Authorisation to reproduce such material must be obtained from the departments/copyright
+                                holders concerned.
+                            </p>
+                            <h2>Privacy Policy</h2>
+                            <p style="text-align:justify">
+                                This website does not automatically capture any specific personal information from you,
+                                (like name, phone number or e-mail address), that allows us to identify you
+                                individually.
+                            </p>
+                            <p style="text-align:justify">
+                                If the website requests you to provide personal information, you will be informed for the
+                                particular purposes for which the information is gathered e.g. feedback form and
+                                adequate security measures will be taken to protect your personal information.
+                            </p>
+                            <p>
+                                We do not sell or share any personally identifiable information volunteered on the
+                                website site to any third party (public/private). Any information provided to this
+                                website will be protected from loss, misuse, unauthorized access or disclosure,
+                                alteration, or destruction.
+                            </p>
+                            <p style="text-align:justify">
+                                We gather certain information about the User, such as Internet protocol (IP) addresses,
+                                domain name, browser type, operating system, the date and time of the visit and the
+                                pages visited. We make no attempt to link these addresses with the identity of
+                                individuals visiting our site unless an attempt to damage the site has been detected.
+                            </p>
+                            <h2>Hyper Linking Policy</h2>
+                            <h3>Links to external websites/portals</h3>
+                            <p style="text-align:justify">
+                                At many places in this website, you shall find links to other websites / portals. This
+                                links have been placed for your convenience.<strong>
+                                    Registration Department ,
+                                    GOA
+                                </strong> is not responsible for the contents and reliability of the linked
+                                websites and does not necessarily endorse the views expressed in them.
+                                Mere presence of the link or its listing on this website should not be assumed as
+                                endorsement of any kind. We cannot guarantee that these links will work all the time and
+                                we have no control over availability of linked pages.
+                            </p>
+                            <h2>Disclaimer</h2>
+                            <p style="text-align:justify">
+                                The official website of <strong>Registration Department, Goa</strong> has been developed to
+                                provide information about the Society Registration to the general public. The documents
+                                and information displayed in the website are for reference purposes only and do not
+                                claim to be a legal document. Though all efforts have been made to ensure the accuracy
+                                of the content, the same should not be construed as a statement of law or used for any
+                                legal purposes.
+                            </p>
+
+                            <p style="text-align:justify">
+                                The information contained in the website is based on the inputs received from the
+                                concerned Sections/branches of the Department. Users are advised to verify/check any
+                                information with the relevant published documents before acting on the information
+                                provided in the website.
+                            </p>
+
+                        </div>
+                        <!-- end of the loop -->
+
+                    </div>
+                </div>
+            <!--//End Pricing -->
+        </div>
+    </main>
+
+     <footer id="footer" class="footer-home">
+            <div class="container">
+                <div class="footerMenu">
+                    <ul id="menu-footer-en" class="menu">
+
+                        <li id="menu-item-2500" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a href="Feedback.aspx">Feedback</a></li>
+                        <li id="menu-item-2501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a href="website-policies.html">Website Policies</a></li>
+                        <li id="menu-item-2502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a target="_blank" href="Download/faq.pdf">FAQ&nbsp;<i class="fa fa-star-o fa-spin" aria-hidden="true"></i></a></li>
+
+                        <li id="menu-item-2504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a target="_blank" href="Download/user_manual.pdf">User Manual</a></li>
+                        <li id="menu-item-2506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2506"><a href="contactus.html">Contact Us</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="copyRights">
+                    <div class="pd-bottom5 color-white ctnt-ownd-dis">Content Owned by Registration Department, Government of Goa</div>
+                    <div class="copyRightsText">
+                        <p>
+                            Developed and hosted by <a href="https://nicgoa.nic.in/" target="_blank">National Informatics Centre, Goa</a>,<br>
+                            <a href="http://meity.gov.in/" target="_blank">Ministry of Electronics & Information Technology</a>, Government of India
+                        </p>
+                        
+                    </div>
+                    <div class="copyRightsLogos">
+                        <a href="#">
+                            <img src="AssestsLogin/img/makeinindia.png" style="width: 127px; height: 45px" alt="Make IN India opens a new window"/></a>
+                        <a href="http://www.nic.in/">
+                            <img src="AssestsLogin/img/nicLogo.png" alt="National Informatics Centre opens a new window"/></a>
+                        <a href="http://www.digitalindia.gov.in/">
+                            <img src="AssestsLogin/img/digitalIndia.png" alt="Digital India opens a new window"/></a>
+                        <!-- <a href="#" class="stqc-logo"><img src="/common_utility/images/STQC-approved.png"  alt="STQC"></a> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script>
+            jQuery(document).ready(function ($) {
+                jQuery('.vc_tta-tabs-list').attr('role', 'tablist');
+                jQuery('.vc_tta-panel').attr('role', 'tabpanel');
+                jQuery('.vc_tta-tab a').attr('role', 'tab');
+                jQuery('[data-vc-tabs]').each(function () {
+                    var id = jQuery(this).attr('href');
+                    id = id.replace('#', '');
+                    jQuery(this).attr('aria-controls', id);
+                    if (jQuery(this).parent().hasClass('vc_active')) {
+                        jQuery(this).attr('aria-selected', true)
+                    } else {
+                        jQuery(this).attr('aria-selected', false)
+                    }
+                });
+                jQuery('[data-vc-tabs]').click(function () {
+                    jQuery(this).parent().siblings().find('a').attr('aria-selected', false);
+                    jQuery(this).attr('aria-selected', true);
+                });
+                if (!String.prototype.startsWith) {
+                    String.prototype.startsWith = function (searchString, position) {
+                        position = position || 0;
+                        return this.indexOf(searchString, position) === position;
+                    };
+                }
+                jQuery('body').on('targetExternalLinks', function () {
+                    var isExternal = function (url) {
+                        if (!url.match('^(https?:)?(\\/\\/).*$')) return false;
+                        return !(location.href.replace("http://", "").replace("https:///", "").split("Default.aspx")[0] === url.replace("http://", "").replace("https:///", "").split("Default.aspx")[0]);
+                    }
+                    jQuery('a').each(function () {
+                        var href = jQuery(this).attr('href');
+                        if (typeof href == 'undefined') {
+                            jQuery(this).attr('href', 'javascript:void(0)');
+                            href = '#';
+                        }
+                        if ($(this).attr('hreflang') !== undefined) {
+                            if (jQuery(this).attr('aria-label') !== typeof undefined) {
+                                jQuery(this).attr('aria-label', jQuery(this).text()).attr('title', jQuery(this).text());
+                            }
+                        } else if (isExternal(href)) {
+                            if (href.indexOf('https://nicgoa.nic.in/') == -1 && href.indexOf('https://nicgoa.nic.in/') == -1) {
+                                if (typeof jQuery(this).attr('onclick') === "undefined") {
+                                    jQuery(this).attr("onclick", "return confirm('You are being redirected to an external website. Please note that District Preview Template cannot be held responsible for external websites content & privacy policies.');");
+                                }
+                            }
+                            if (typeof jQuery(this).attr('aria-label') === "undefined" || typeof jQuery(this).attr('title') === "undefined") {
+                                var text = '';
+                                if (jQuery(this).text().trim() !== '') {
+                                    text = jQuery(this).text().trim() + ' - ';
+                                } else {
+                                    text = jQuery(this).attr('href') + ' - ';
+                                }
+                                if (href.indexOf('https://nicgoa.nic.in/') == -1 && href.indexOf('auth.s3waas.gov.in') == -1) {
+                                    if (typeof jQuery(this).attr('aria-label') === "undefined") {
+                                        jQuery(this).attr('aria-label', text + 'External site that opens in a new window');
+                                    }
+                                    if (typeof jQuery(this).attr('title') === "undefined") {
+                                        jQuery(this).attr('title', text + 'External site that opens in a new window');
+                                    }
+                                }
+                            }
+                            if (href.indexOf('https://nicgoa.nic.in/') == -1) {
+                                jQuery(this).prop('target', '_blank');
+                            }
+                        }
+                    });
+                })
+                jQuery('body').trigger('targetExternalLinks');
+                jQuery('body iframe').each(function () {
+                    var attrSrc = $(this).attr('src');
+                    if (attrSrc.indexOf('map') > 0) {
+                        $(this).attr('title', 'District Map');
+                    }
+                });
+                $('.flex-direction-nav a.flex-prev').attr({ 'title': 'Previous', 'aria-label': 'Previous' });
+                $('.flex-pauseplay a.flex-pause').attr({ 'title': 'Play/Pause', 'aria-label': 'Play/Pause' });
+                $('.flex-direction-nav a.flex-next').attr({ 'title': 'Next', 'aria-label': 'Next' });
+                $('a[download]').each(function () {
+                    var ariaLabelPrevious = $(this).prev().attr('aria-label');
+                    if (typeof ariaLabelPrevious !== typeof undefined) {
+                        var ariaLabel = $(this).prev().attr('aria-label').split('-')[0];
+                        ariaLabel = 'Download ' + ariaLabel;
+                        $(this).attr('aria-label', ariaLabel).removeAttr('aria-hidden');
+                    }
+                });
+            });
+        </script>
+
+<link href="AssestsLogin/CSS/js_composer.min.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/flexslider.min.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/customflexslider.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/style.min.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/componenthelper.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/servicetabs.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/fontawesome.min.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/events.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/footerlogocarousel.css" rel="stylesheet" media='all' />
+        <link href="AssestsLogin/CSS/photogalleryhome.css" rel="stylesheet" media='all' />
+
+
+        <script src='AssestsLogin/JS/common.js'></script>
+        <script src='AssestsLogin/JS/core.min.js'></script>
+        <script src='AssestsLogin/JS/jquery.flexslider.js'></script>
+        <script src='AssestsLogin/JS/easyResponsiveTabs.js'></script>
+        <script src='AssestsLogin/JS/jquery.fancybox.js'></script>
+        <script src='AssestsLogin/JS/style.switcher.js'></script>
+        <script src='AssestsLogin/JS/menu.js'></script>
+        <script src='AssestsLogin/JS/table.min.js'></script>
+        <script src='AssestsLogin/JS/custom.js'></script>
+        <script src='AssestsLogin/JS/extra.js'></script>
+        <script src='AssestsLogin/JS/wp-embed.min.js'></script>
+        <script src='AssestsLogin/JS/js_composer_front.min.js'></script>
+        <script src='AssestsLogin/JS/jquery.flexslider-min.js'></script>
+        <script src='AssestsLogin/JS/vc-accordion.min.js'></script>
+        <script src='AssestsLogin/JS/vc-tta-autoplay.min.js'></script>
+        <script src='AssestsLogin/JS/vc-tabs.min.js'></script>
+    
+</body>
+</html>

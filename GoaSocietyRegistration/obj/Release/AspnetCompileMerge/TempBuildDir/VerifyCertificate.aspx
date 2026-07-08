@@ -1,0 +1,715 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VerifyCertificate.aspx.cs" Inherits="GoaSocietyRegistration.VerifyCertificate" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Online Society Registration Portal" />
+    <meta name="keywords" content="Society Registration Portal,Society  Registration" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16" />
+    <title>Verify Certificate Page of Society Registration Portal</title>
+    <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16" />
+
+    
+
+
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url("Assests/Default/fonts/icomooncb5a.eot?y6palq");
+            src: url("Assests/Default/fonts/icomooncb5a.eot?y6palq#iefix") format("embedded-opentype"), url("Assests/Default/fonts/icomooncb5a.ttf?y6palq") format("truetype"), url("Assests/Default/fonts/icomooncb5a.woff?y6palq") format("woff"), url("Assests/Default/fonts/icomooncb5a.svg?y6palq#icomoon") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+
+        .btn-success {
+            color: #ffffff !important;
+            background-color: #5cb85c !important;
+            border-color: #4cae4c !important;
+        }
+
+        .mya {
+            text-decoration: none !important;
+        }
+
+        .col-md-3 {
+            width: 30%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .col-xs-12 {
+                width: 100%;
+            }
+        }
+    </style>
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        .myheight {
+            height: 262px;
+        }
+
+        .pricing {
+            position: relative;
+            margin-bottom: 15px;
+            border: 3px solid #eee;
+            width: 100%;
+        }
+
+        .noc {
+            padding: 8px;
+            background-color: #00a65a !important;
+            color: #ffffff;
+        }
+
+        .pricing:hover {
+            border: 3px solid #3C7D14;
+        }
+
+        .content-page .list-unstyled li {
+            margin-bottom: 3px;
+        }
+
+        .pricing-content li {
+            color: #888;
+            font-size: 12px;
+            padding: 7px 15px;
+            border-bottom: solid 1px #f5f9e7;
+        }
+
+        .price-active, .pricing:hover {
+            z-index: 9;
+        }
+
+        .pricing-head {
+            text-align: center;
+        }
+
+            .pricing-head h3 {
+                background: #3C7D14;
+            }
+
+            .pricing-head h3 {
+                font-weight: 300;
+                color: #fafafa;
+                padding: 12px 0;
+                font-size: 27px;
+                background: #48931bb3;
+                border-bottom: none;
+            }
+
+            .pricing-head h3, .pricing-head h4 {
+                margin: 0;
+                line-height: normal;
+            }
+
+        .content-page h3 {
+            font-size: 20px;
+            margin-bottom: 7px;
+        }
+
+        .content-page h2, .content-page h3, .content-page h4, .content-page h5, .content-page h6 {
+            /* text-transform: inherit; */
+            padding-top: 10px;
+        }
+
+        .content-page p, .content-page .list-unstyled {
+            margin-bottom: 20px;
+        }
+    </style>
+    <link href="AssestsLogin/CSS/thememylogin.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/style.min.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/fontawsome.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/extra.features.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/style.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/style1.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/js_composer.min.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/fontawsome.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/base.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/extra.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/sliderhelper.css" rel="stylesheet" media='all' />
+
+
+    <link href="AssestsLogin/CSS/styles.css" rel="stylesheet" media='all' />
+    <!-- <script src='AssestsLogin/JS/jquery-migrate.min.js'></script> -->
+    <!-- <script src='AssestsLogin/JS/themed-profiles.js'></script> -->
+    <!-- <script src='AssestsLogin/JS/external.js'></script> -->
+    <link rel="canonical" href="Default.aspx" />
+    <link rel='shortlink' href='Default.aspx' />
+    <noscript>
+        <style>
+            #topBar #accessibility ul li .goiSearch, #topBar1 #accessibility ul li .goiSearch {
+                visibility: visible;
+            }
+
+            #topBar #accessibility ul li .socialIcons ul, #topBar1 #accessibility ul li .socialIcons ul {
+                background: #fff !important;
+            }
+
+            #topBar #accessibility ul li .goiSearch, #topBar1 #accessibility ul li .goiSearch {
+                right: 0;
+                left: inherit;
+            }
+
+            .nav li a:focus > ul {
+                left: 0;
+                opacity: 0.99;
+            }
+
+            a:focus, button:focus, .carasoleflex-wrap .flexslider .slides > li a:focus, .flexslider .slides > li a:focus {
+                outline: 3px solid #ff8c00 !important;
+            }
+
+            .flexslider .slides > li {
+                display: block;
+            }
+
+            .nav li.active > a, .nav li > a:hover, .nav li > a:focus, .nav ul li a:hover,
+            .mva7-thc-activetheme-district-theme-13 .nav li:hover > a, .mva7-thc-activetheme-district-theme-13 .nav li.active > a, .home-13 .nav li:hover > a, .home-13 .nav li.active > a {
+                color: #ffffff;
+            }
+
+            .nav li:hover > a {
+                border-top: none;
+                color: #ffffff;
+            }
+
+            .nav li.active > a {
+                border: 0;
+            }
+
+            .nav ul {
+                opacity: 1;
+                left: 0;
+                position: static !important;
+                width: auto;
+                border: 0;
+            }
+
+            .nav li {
+                position: static !important;
+                display: block;
+                float: none;
+                border: 0 !important;
+            }
+
+                .nav li > a {
+                    float: none;
+                    display: block;
+                    background-color: rgba(146,38,4,0.75) !important;
+                    color: #ffffff;
+                    margin: 0;
+                    padding: 12px 20px !important;
+                    border-radius: 0;
+                    border-bottom: 1px solid #ffffff !important;
+                    position: static !important;
+                    border-top: 0;
+                    font-size: 14px !important;
+                }
+
+            .nav ul.sub-menu li > a {
+                background-color: rgba(146,38,4,1);
+                font-size: 12px !important;
+            }
+
+            ul li .socialIcons {
+                visibility: visible !important;
+            }
+
+            .nav li > a,
+            .nav li.active > a {
+                background-color: #9e6b22 !important;
+            }
+
+            .nav ul.sub-menu li > a {
+                background-color: #f3b45b !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-15 .menuWrapper {
+                background-color: #ffffff;
+            }
+
+            .mva7-thc-activetheme-district-theme-2 .nav li > a,
+            .mva7-thc-activetheme-district-theme-2 .nav li.active > a {
+                background-color: rgba(63,77,184,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-2 .nav ul.sub-menu li > a {
+                background-color: rgba(63,77,184,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-3 .nav li > a,
+            .mva7-thc-activetheme-district-theme-3 .nav li.active > a,
+            .mva7-thc-activetheme-district-theme-5 .nav li > a,
+            .mva7-thc-activetheme-district-theme-5 .nav li.active > a {
+                background-color: rgba(212,60,60,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-3 .nav ul.sub-menu li > a,
+            .mva7-thc-activetheme-district-theme-5 .nav ul.sub-menu li > a {
+                background-color: rgba(212,60,60,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-4 .nav li > a,
+            .mva7-thc-activetheme-district-theme-4 .nav li.active > a {
+                background-color: rgba(184,48,88,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-4 .nav ul.sub-menu li > a {
+                background-color: rgba(184,48,88,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-6 .nav li > a,
+            .mva7-thc-activetheme-district-theme-6 .nav li.active > a {
+                background-color: rgba(16,91,122,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-6 .nav ul.sub-menu li > a {
+                background-color: rgba(16,91,122,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-7 .nav li > a,
+            .mva7-thc-activetheme-district-theme-7 .nav li.active > a {
+                background-color: rgba(2,20,80,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-7 .nav ul.sub-menu li > a {
+                background-color: rgba(2,20,80,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-8 .nav li > a,
+            .mva7-thc-activetheme-district-theme-8 .nav li.active > a {
+                background-color: rgba(0,144,145,0.65) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-8 .nav ul.sub-menu li > a {
+                background-color: rgba(0,144,145,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-9 .nav li > a,
+            .mva7-thc-activetheme-district-theme-9 .nav li.active > a {
+                background-color: rgba(60,125,20,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-9 .nav ul.sub-menu li > a {
+                background-color: rgba(60,125,20,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-10 .nav li > a,
+            .mva7-thc-activetheme-district-theme-10 .nav li.active > a {
+                background-color: rgba(233,13,65,0.70) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-10 .nav ul.sub-menu li > a {
+                background-color: rgba(233,13,65,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-11 .nav li > a,
+            .mva7-thc-activetheme-district-theme-11 .nav li.active > a {
+                background-color: rgba(104,57,127,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-11 .nav ul.sub-menu li > a {
+                background-color: rgba(104,57,127,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-13 .nav li > a,
+            .mva7-thc-activetheme-district-theme-13 .nav li.active > a {
+                background-color: rgba(0,0,0,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-13 .nav ul.sub-menu li > a {
+                background-color: rgba(0,0,0,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-14 .nav li > a,
+            .mva7-thc-activetheme-district-theme-14 .nav li.active > a {
+                background-color: rgba(0,120,175,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-14 .nav ul.sub-menu li > a {
+                background-color: rgba(0,120,175,1) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-15 .nav li > a,
+            .mva7-thc-activetheme-district-theme-15 .nav li.active > a {
+                background-color: rgba(150,86,104,0.75) !important;
+            }
+
+            .mva7-thc-activetheme-district-theme-15 .nav ul.sub-menu li > a {
+                background-color: rgba(150,86,104,1) !important;
+            }
+
+            y
+            /*for high contrast css*/
+            .contrast #topBar #accessibility ul li .socialIcons ul, .contrast #topBar1 #accessibility ul li .socialIcons ul,
+            .contrast .nav li > a, .contrast .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-2 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-6 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-7 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-8 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-9 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-10 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-11 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-13 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-14 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-15 .menuWrapper,
+            .contrast.mva7-thc-activetheme-district-theme-2 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-2 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-2 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-3 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-3 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-5 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-5 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-3 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-5 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-4 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-4 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-4 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-6 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-6 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-6 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-7 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-7 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-7 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-8 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-8 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-8 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-9 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-9 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-9 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-10 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-10 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-10 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-11 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-11 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-11 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-13 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-13 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-13 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-14 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-14 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-14 .nav ul.sub-menu li > a,
+            .contrast.mva7-thc-activetheme-district-theme-15 .nav li > a,
+            .contrast.mva7-thc-activetheme-district-theme-15 .nav li.active > a,
+            .contrast.mva7-thc-activetheme-district-theme-15 .nav ul.sub-menu li > a,
+            body.contrast {
+                background-color: #000 !important;
+            }
+
+            .contrast a, .contrast .socialIcons.select-lang a {
+                color: #ffff00 !important;
+            }
+
+            body.contrast, .contrast p, .contrast div, .contrast table {
+                color: #fff !important;
+            }
+        </style>
+    </noscript>
+    <link rel="alternate" href="Default.aspx" hreflang="x-default" />
+    <link rel="alternate" href="Default.aspx" hreflang="en" />
+
+</head>
+<body class="page-template-default page page-id-1520 mva7-thc-activetheme-district-theme lang-en wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
+    <header>
+        <div id="topBar" class="wrapper">
+            <div class="container">
+                <div class="push-right" aria-label="Primary">
+                    <div id="accessibility">
+                        <ul id="accessibilityMenu">
+                            <li><a href="#SkipContent" class="skip-to-content" title="Skip to main content"><span class="icon-skip-to-main responsive-show"></span><strong class="responsive-hide">SKIP TO MAIN CONTENT</strong></a></li>
+                            <li>
+                                <a href="ScreenReaderAccess.html" title="Screen Reader Access">
+                                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                                    <span class="off-css">Screen Reader Access</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="site-map.html" title="Sitemap">
+                                    <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                    <span class="off-css">Site Map</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0);" title="Accessibility Links" aria-label="Accessibility Links" class="mobile-show accessible-icon"><span class="off-css">Accessibility Links</span><span class="icon-accessibility" aria-hidden="true"></span></a>
+                                <div class="accessiblelinks textSizing">
+                                    <ul>
+                                        <li><a href="javascript:void(0);" aria-label="Font Size Increase" title="Font Size Increase"><span aria-hidden="true">A+</span><span class="off-css"> Font Size Increase</span></a></li>
+                                        <li><a href="javascript:void(0);" aria-label="Normal Font" title="Normal Font"><span aria-hidden="true">A</span><span class="off-css"> Normal Font</span></a></li>
+                                        <li><a href="javascript:void(0);" aria-label="Font Size Decrease" title="Font Size Decrease"><span aria-hidden="true">A-</span><span class="off-css"> Font Size Decrease</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0);" class="change-language" aria-label="English" title="English">English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="push-left">
+                    <div class="govBranding">
+                        <ul>
+                            <li><a href="https://www.goa.gov.in/">गोयें सरकार </a></li>
+                            <li><a lang="grt" href="https://www.goa.gov.in/">Government of Goa</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper header-wrapper">
+            <div class="container header-container">
+                <div class="logo">
+                    <a href="Default.aspx" aria-label="Go to home" class="emblem" rel="home">
+                        <img class="site_logo" height="100" id="logo" src="AssestsLogin/img/goa.png" alt="Goa State Emblem" />
+
+                        <div class="logo-text">
+                            <strong lang="grt" class="site_name_regional" style="font-weight: 700!important">Registration Of Societies</strong>
+                            <h1 class="site_name_english">Department of Registration ,Goa</h1>
+
+                        </div>
+                    </a>
+                </div>
+
+                <a class="menuToggle" href="javascript:void(0);" aria-label="Mobile Menu"><span class="icon-menu"></span><span class="tcon">Menu Toggle</span></a>
+            </div>
+        </div>
+        <div class="menuWrapper">
+            <div class="menuMoreText hide">More</div>
+            <div class="container">
+                <nav class="menu">
+                    <ul id="menu-header-en" class="nav clearfix">
+                        <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2658  ">
+                            <a href="Default.aspx">Home</a>
+                        </li>
+                        <li id="menu-item-2659" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2658">
+                            <a href="aboutus.html">About Us</a></li>
+                        <li id="menu-item-2660" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2660">
+                            <a href="leaflet.pdf" target="_blank">Help</a>
+                        </li>
+
+                        <li id="menu-item-2494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2494"><a href="contactus.html">Contact Us</a></li>
+                        <li id="menu-item-2495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2494"><a href="PublicDashboard.aspx">Public Dashboard</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="overflowMenu">
+            <div class="ofMenu">
+                <ul>
+                </ul>
+            </div>
+            <a title="Close" href="javascript:void(0);" class="closeMenu"><span class="icon-close" aria-hidden="true"></span>Close</a>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="wrapper bodyWrapper " style="min-height: auto!important">
+            <div class="container ">
+
+                <div class="row breadcrumb-outer">
+
+                    <div class="left-content push-left">
+                        <div id="breadcam" role="navigation" aria-label="breadcrumb">
+                            <ul class="breadcrumbs">
+                                <li><a href="Default.aspx" class="home"><span>Home</span></a></li>
+                                <li class="current">Verify Certificate</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="SkipContent"></div>
+
+                </div>
+                <div class="wpb_wrapper" style="min-height: 300px">
+
+                    <form id="form1" runat="server">
+                        <div class="noc">Verify Certificate</div>
+                        <div class="container" style="border: 1px solid #000">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card" style="width: 100%;">
+                                        <div class="card-body">
+                                            <div class="form-group" style="padding-top: 15px!important">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Department</strong></h5>
+                                                </label>
+                                                <asp:DropDownList ID="ddlDepartment" CssClass="form-control" runat="server">
+                                                    <asp:ListItem Value="-1" Text="--Select--"></asp:ListItem>
+                                                    <asp:ListItem Value="1" Text="Registration Department"></asp:ListItem>
+                                                </asp:DropDownList>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Service</strong></h5>
+                                                </label>
+                                                <asp:DropDownList ID="ddlService" CssClass="form-control" runat="server">
+                                                    <asp:ListItem Value="-1" Text="--Select--"></asp:ListItem>
+                                                    <asp:ListItem Value="1" Text="Registration of Society"></asp:ListItem>
+                                                </asp:DropDownList>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>District</strong></h5>
+                                                </label>
+                                                <asp:DropDownList ID="ddlDistrict" CssClass="form-control" runat="server">
+                                                    <asp:ListItem Value="-1" Text="--Select--"></asp:ListItem>
+                                                    <asp:ListItem Value="551" Text="North Goa"></asp:ListItem>
+                                                    <asp:ListItem Value="552" Text="South Goa"></asp:ListItem>
+                                                </asp:DropDownList>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Certificate No.</strong></h5>
+                                                </label>
+                                                <asp:TextBox ID="TxtBxCertiifcate" CssClass="form-control" placeholder="Certificate No." runat="server"></asp:TextBox>
+                                            </div>
+                                            <asp:Button ID="BtnSearch" OnClick="BtnSearch_Click" CssClass="btn btn-success" runat="server" Text="Search" />
+                                            <a href="VerifyCertificate.aspx" style="float: right!important" class="btn btn-danger">Reset</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card" style="width: 100%;" id="data" runat="server" visible="false">
+                                        <div class="card-body">
+                                            <%--  <h5 class="card-title" style="padding-top: 15px!important"><u>Certificate Data</u></h5>--%>
+                                            <div class="form-group" style="padding-top: 15px!important">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Name of the Society</strong></h5>
+                                                </label>
+                                                <asp:TextBox ID="TextBox2" CssClass="form-control" Enabled="false" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Address of the Society</strong></h5>
+                                                </label>
+                                                <asp:TextBox ID="TextBox3" CssClass="form-control" Enabled="false" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Application Date</strong></h5>
+                                                </label>
+                                                <asp:TextBox ID="TextBox4" CssClass="form-control" MaxLength="10" Enabled="false" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Certificate No.</strong></h5>
+                                                </label>
+                                                <asp:TextBox ID="TextBox5" CssClass="form-control" Enabled="false" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Issued On</strong></h5>
+                                                </label>
+                                                <asp:TextBox ID="TextBox6" CssClass="form-control" MaxLength="10" Enabled="false" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">
+                                                    <h5><strong>Valid Upto</strong></h5>
+                                                </label>
+                                                <asp:TextBox ID="TextBox7" CssClass="form-control" MaxLength="10" Enabled="false" runat="server"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="card" style="width: 100%;" id="data2" runat="server" visible="false">
+                                         <h5><strong>No Data Found</strong></h5>
+                                         </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!--//End Pricing -->
+        </div>
+    </main>
+
+
+
+    <footer id="footer" class="footer-home">
+        <div class="container">
+            <div class="footerMenu">
+                <ul id="menu-footer-en" class="menu">
+                    <li id="menu-item-2500" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a href="Feedback.aspx">Feedback</a></li>
+                    <li id="menu-item-2501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a href="website-policies.html">Website Policies</a></li>
+
+                    <li id="menu-item-2502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a target="_blank" href="Download/faq.pdf">FAQ&nbsp;<i class="fa fa-star-o fa-spin" aria-hidden="true"></i></a></li>
+
+                    <li id="menu-item-2504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a target="_blank" href="Download/user_manual.pdf">User Manual</a></li>
+                    <li id="menu-item-2506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2506"><a href="contactus.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+
+            <div class="copyRights">
+                <div class="pd-bottom5 color-white ctnt-ownd-dis">Content Owned by Registration Department, Government of Goa</div>
+                <div class="copyRightsText">
+                    <p>
+                        Developed and hosted by <a href="https://nicgoa.nic.in/" rel="noopener noreferrer" target="_blank">National Informatics Centre, Goa</a>,<br>
+                        <a href="http://meity.gov.in/" rel="noopener noreferrer" target="_blank">Ministry of Electronics & Information Technology</a>, Government of India
+                    </p>
+
+                </div>
+                <div class="copyRightsLogos">
+                    <a href="#">
+                        <img src="AssestsLogin/img/makeinindia.png" style="width: 127px; height: 45px" alt="Make IN India opens a new window" /></a>
+                    <a href="http://www.nic.in/">
+                        <img src="AssestsLogin/img/nicLogo.png" alt="National Informatics Centre opens a new window" /></a>
+                    <a href="http://www.digitalindia.gov.in/">
+                        <img src="AssestsLogin/img/digitalIndia.png" alt="Digital India opens a new window" /></a>
+                    <!-- <a href="#" class="stqc-logo"><img src="/common_utility/images/STQC-approved.png"  alt="STQC"></a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+     
+
+    <link href="AssestsLogin/CSS/js_composer.min.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/flexslider.min.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/customflexslider.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/style.min.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/componenthelper.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/servicetabs.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/fontawesome.min.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/events.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/footerlogocarousel.css" rel="stylesheet" media='all' />
+    <link href="AssestsLogin/CSS/photogalleryhome.css" rel="stylesheet" media='all' />
+</body>
+</html>

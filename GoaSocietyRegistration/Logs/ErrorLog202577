@@ -1,0 +1,82 @@
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 11:55:22 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 11:55:37 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Organization.Dashboard.ENameLinkBtn_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\Dashboard.aspx.cs:line 654ENameLinkBtn_Click Dashboard
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 11:58:06 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:01:01 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Organization.Dashboard.ENameLinkBtn_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\Dashboard.aspx.cs:line 654ENameLinkBtn_Click Dashboard
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:02:22 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:02:30 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Organization.Dashboard.ENameLinkBtn_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\Dashboard.aspx.cs:line 654ENameLinkBtn_Click Dashboard
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:06:12 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Admin.VerifySoceity.dashboard_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\VerifySociety.aspx.cs:line 978dashboard_Click VerifySociety
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:09:57 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Organization.Dashboard.ENameLinkBtn_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\Dashboard.aspx.cs:line 654ENameLinkBtn_Click Dashboard
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:10:15 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Organization.Dashboard.ENameLinkBtn_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\Dashboard.aspx.cs:line 654ENameLinkBtn_Click Dashboard
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:10:37 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Admin.VerifySoceity.dashboard_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\VerifySociety.aspx.cs:line 978dashboard_Click VerifySociety
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:11:52 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:11:58 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Organization.Dashboard.ENameLinkBtn_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\Dashboard.aspx.cs:line 654ENameLinkBtn_Click Dashboard
+---------------------------------------------------------------------------------------------------------------------------------
+07-07-2025 12:12:21 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.Admin.VerifySoceity.dashboard_Click(Object sender, EventArgs e) in C:\Users\Dell\Documents\Visual Studio 2022\eSociety\GoaSocietyRegistration\Organization\VerifySociety.aspx.cs:line 978dashboard_Click VerifySociety

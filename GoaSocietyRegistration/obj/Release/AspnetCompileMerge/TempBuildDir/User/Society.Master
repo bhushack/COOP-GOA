@@ -1,0 +1,366 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Society.master.cs" Inherits="GoaSocietyRegistration.Society" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>Society Registartion</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+
+
+    <script src="../Scripts/jquery-3.5.0.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/style.css" rel="stylesheet" />
+    <link href="../Admin/assets/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="../assets/css/portal.css" rel="stylesheet" />
+
+        <script>
+        $(function () {
+            $("body").on('click keypress', function () {
+                ResetThisSession();
+            });
+        });
+
+  var timeInSecondsAfterSessionOut = 1200; // change this to change session time out (in seconds).
+        var secondTick = 0;
+
+        function ResetThisSession() {
+            secondTick = 0;
+        }
+
+        function StartThisSessionTimer() {
+            secondTick++;
+            var timeLeft = ((timeInSecondsAfterSessionOut - secondTick) / 60).toFixed(0); // in minutes
+        timeLeft = timeInSecondsAfterSessionOut - secondTick; // override, we have 30 secs only 
+
+            $("#spanTimeLeft").html(timeLeft);
+
+            if (secondTick > timeInSecondsAfterSessionOut) {
+                clearTimeout(tick);
+                document.getElementById("btnHidden").click();
+                window.location = "LoginModule.aspx";
+                return;
+            }
+            tick = setTimeout("StartThisSessionTimer()", 1000);
+        }
+
+        StartThisSessionTimer();
+</script>
+
+    <script>
+        $(window).ready(function () {
+            $('#status').fadeOut();
+            $('#preloader').delay(200).fadeOut('slow');
+        });
+    </script>
+    <style>
+          .hidden { display: none; }
+        #preloader {
+            background: #FFF;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 9999;
+        }
+        a{
+            text-decoration:none!important;
+        }
+        #status,
+        .status-mes {
+            background-image: url(../assets/images/loading.gif);
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px;
+            left: 50%;
+            margin: -100px 0 0 -100px;
+            position: absolute;
+            top: 50%;
+            width: 200px;
+        }
+
+        .border-primary {
+            border-color: #424242 !important;
+        }
+
+        .status-mes {
+            background: none;
+            left: 0;
+            margin: 0;
+            text-align: center;
+            top: 65%;
+        }
+
+        .fafaicon {
+            font-size: 25px;
+        }
+    </style>
+    <%--  <script type="text/javascript">
+        if (document.layers) {
+            //Capture the MouseDown event.
+            document.captureEvents(Event.MOUSEDOWN);
+
+            //Disable the OnMouseDown event handler.
+            document.onmousedown = function () {
+                return false;
+            };
+        }
+        else {
+            //Disable the OnMouseUp event handler.
+            document.onmouseup = function (e) {
+                if (e != null && e.type == "mouseup") {
+                    //Check the Mouse Button which is clicked.
+                    if (e.which == 2 || e.which == 3) {
+                        //If the Button is middle or right then disable.
+                        return false;
+                    }
+                }
+            };
+        }
+
+        //Disable the Context Menu event.
+        document.oncontextmenu = function () {
+            return false;
+        };
+    </script>--%>
+
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="noBack();">
+    <form id="form1" runat="server">
+        <header class="app-header fixed-top">
+            <div class="app-header-inner">
+                <div class="container-fluid py-2">
+                    <div class="app-header-content">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img">
+                                        <title>Menu</title>
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+                                </a>
+                            </div>
+
+                            <!--//col-->
+                            <div class="app-search-box col">
+                                <h4><strong>Society Registration</strong></h4>
+                            </div>
+                            <!--//app-search-box-->
+                            <!--//col-->
+                            <div class="app-utilities col-auto">
+                                <div class="app-utility-item app-notifications-dropdown dropdown">
+                                </div>
+                                <!--//app-utility-item-->
+                                <div class="app-utility-item">
+                                    <a href="#" title="UserManual">
+                                        <asp:Label ID="Label1" Visible="false" runat="server" Text=""></asp:Label>
+                                    </a>
+                                </div>
+                                <!--//app-utility-item-->
+
+                                <div class="app-utility-item ">
+
+                                    <asp:LinkButton ID="lklogout" class="dropdown-item" runat="server" OnClick="lklogout_Click" CausesValidation="false"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</asp:LinkButton>
+
+                                </div>
+
+                                <!--//app-user-dropdown-->
+                            </div>
+                            <!--//app-utilities-->
+                        </div>
+                        <!--//row-->
+                    </div>
+                    <!--//app-header-content-->
+                </div>
+                <!--//container-fluid-->
+            </div>
+            <!--//app-header-inner-->
+            <div id="app-sidepanel" class="app-sidepanel sidepanel-hidden">
+                <div id="sidepanel-drop" class="sidepanel-drop"></div>
+                <div class="sidepanel-inner d-flex flex-column">
+                    <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
+                    <div class="app-branding">
+                        <a style="text-decoration: none;" class="app-logo" href="Dashboard.aspx">
+                            <img class="logo-icon me-2" src="../assets/images/Goa.png" alt="logo" /><span class="logo-text">eSociety</span></a>
+                    </div>
+                    <!--//app-branding-->
+                    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+                        <ul class="app-menu list-unstyled accordion" id="menu-accordion">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Dashboard.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-dashboard fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">Home</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+                            <!--//nav-item-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="SocietyDetails.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-building fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">Society Details</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+                            <!--//nav-item-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="MemberDetails.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-users fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">Managing Committee</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="NormalMembers.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-users fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">Member Details</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+                            <li class="nav-item" runat="server" id="schedule1">
+                                <a class="nav-link" href="PaidEmployee.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-file fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">Paid Employee Details</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="DocumentUpload.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-upload fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">Document Upload</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ViewApplicantDetails.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-wpforms fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">View Form</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+                            <li class="nav-item">
+                                <asp:LinkButton ID="LinkButton1" CssClass="nav-link" Visible="false" runat="server"><span class="nav-icon"> 
+                                        <i class="fa fa-wpforms fafaicon" aria-hidden="true"></i>
+                                    </span>Payment Receipt</asp:LinkButton>
+                            </li>
+                            
+                             <li class="nav-item" runat="server" visible="false" id="nav_certcopy" >
+                                <a class="nav-link" href="ApplyCertifiedCopy.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-pencil-square fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">Apply for Certified Copy</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+
+                            <li class="nav-item" runat="server" visible="false" id="nav_amendment" >
+                                <a class="nav-link" href="Amendment.aspx">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-pencil-square fafaicon" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="nav-link-text">Amendment</span>
+                                </a>
+                                <!--//nav-link-->
+                            </li>
+
+                        </ul>
+                        <!--//app-menu-->
+                    </nav>
+                    <!--//app-nav-->
+
+                    <div class="app-sidepanel-footer" runat="server" visible="false">
+                        <nav class="app-nav app-nav-footer">
+                            <ul class="app-menu footer-menu list-unstyled">
+                                <li>
+                                    <a class="nav-link" target="_blank" href="../Download/UserManual.pdf"><i class="fa fa-user fafaicon" aria-hidden="true"></i>
+
+                                        <span class="nav-link-text">User Manual</span>
+                                    </a>
+                                    <!--//nav-link-->
+                                </li>
+                                <!--//nav-item-->
+                            </ul>
+                            <!--//footer-menu-->
+                        </nav>
+                    </div>
+                    <!--//app-sidepanel-footer-->
+                </div>
+                <!--//sidepanel-inner-->
+            </div>
+            <!--//app-sidepanel-->
+        </header>
+        <!--//app-header-->
+
+        <div class="app-wrapper">
+            <div class="app-content col-xs-12 col-sm-12">
+                <%--pt-3 p-md-3 p-lg-4--%>
+                <div class="container-xl">
+                    <br />
+                    <br />
+                    <br />
+                    <div class="row">
+                         <asp:Button ID="btnHidden" runat="server" CssClass="hidden" OnClick="btnHidden_Click" ClientIDMode="Static" />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <!--//container-fluid-->
+            </div>
+            <!--//app-content-->
+            <footer class="app-footer">
+                <div class="container text-center py-3">
+                    <small class="copyright">Designed, Development done by  <strong>National Informatics Centre, Goa</strong></small>
+                </div>
+            </footer>
+            <!--//app-footer-->
+        </div>
+        <!--//app-wrapper-->
+    </form>
+
+
+
+
+    <script src="../Scripts/app.js"></script>
+
+</body>
+</html>

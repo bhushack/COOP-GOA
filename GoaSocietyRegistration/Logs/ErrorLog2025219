@@ -1,0 +1,9 @@
+---------------------------------------------------------------------------------------------------------------------------------
+19-02-2025 10:36:36 ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\Nagesh\Documents\Visual Studio 2015\Projects\eSociety\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin
