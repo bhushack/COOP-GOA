@@ -146,7 +146,7 @@
                     <header class="page-header row justify-center">
                         <div class="col-md-6 col-lg-8">
                             <%--<h1 class="float-left text-center text-md-left">Cards</h1>--%>
-                            <h4 style="align-content:center; color:white">SOCIETY REGISTRATION (Department of Registration, Goa)</h4>
+                            <h4 style="align-content:center; color:white">SOCIETY REGISTRATION (Department of Registration, GOA)</h4>
                         </div>
                         <div class="dropdown user-dropdown col-md-6 col-lg-4 text-center text-md-right">
                             <a class="btn btn-stripped dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

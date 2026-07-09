@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------------------------------------
+7/8/2026 4:11:37 PM ==> Thread was being aborted.    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at GoaSocietyRegistration.OrganizationLogin.loginsuccessfull(String username) in C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 379
+   at GoaSocietyRegistration.OrganizationLogin.lkbtnorglogin_Click(Object sender, EventArgs e) in C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\OrganizationLogin.aspx.cs:line 529lkbtnorglogin_Click OrganizationLogin

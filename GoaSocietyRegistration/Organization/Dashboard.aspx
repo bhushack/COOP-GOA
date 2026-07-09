@@ -493,7 +493,7 @@
                     <i class="fa fa-check" aria-hidden="true"></i>
                 </div>
                 <div class="content">
-                    <div class="text">Verify Observation Society</div>
+                    <div class="text">Verify Observation Society --</div>
                     <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">
                         <asp:Label ID="observationcountlabel" runat="server" Text=""></asp:Label>
                     </div>

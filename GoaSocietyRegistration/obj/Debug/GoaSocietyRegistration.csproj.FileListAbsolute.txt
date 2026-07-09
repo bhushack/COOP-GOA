@@ -101,3 +101,13 @@ C:\Users\user\source\repos\eSociety\eSociety\GoaSocietyRegistration\obj\Debug\Go
 C:\Users\user\source\repos\eSociety\eSociety\GoaSocietyRegistration\obj\Debug\GoaSocie.88BA6AF0.Up2Date
 C:\Users\user\source\repos\eSociety\eSociety\GoaSocietyRegistration\obj\Debug\GoaSocietyRegistration.dll
 C:\Users\user\source\repos\eSociety\eSociety\GoaSocietyRegistration\obj\Debug\GoaSocietyRegistration.pdb
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\bin\bin\AntiXssLibrary.dll
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\bin\GoaSocietyRegistration.dll.config
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\bin\GoaSocietyRegistration.dll
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\bin\GoaSocietyRegistration.pdb
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\bin\Microsoft.mshtml.dll
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\obj\Debug\GoaSocietyRegistration.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\obj\Debug\GoaSocietyRegistration.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\obj\Debug\GoaSocie.88BA6AF0.Up2Date
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\obj\Debug\GoaSocietyRegistration.dll
+C:\Users\user\source\repos\COOP-GOA\GoaSocietyRegistration\obj\Debug\GoaSocietyRegistration.pdb
